@@ -1,0 +1,16 @@
+:root {
+  --cor-texto: #333;
+  --cor-fundo: #fff;
+  --cor-link: #333;
+  --cor-link-hover: #333;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--cor-texto);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Archivo Black';
+}
+
