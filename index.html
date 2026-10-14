@@ -1,456 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Matheus Rayol | Portfolio &amp; Online CV</title>
-    <link rel="icon" type="image/png" sizes="612x612" href="assets/img/matheusrayol.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matheus Rayol · Localização, QA e Desenvolvimento</title>
+    <meta name="description" content="Matheus Rayol: especialista em localização de software e QA para Brasil e Portugal, fundador da MRF Localização e Serviços e criador do Sideboardy.">
+    <meta name="theme-color" content="#0b0d12">
+    <link rel="canonical" href="https://matheusrayol.com/">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://matheusrayol.com/">
+    <meta property="og:title" content="Matheus Rayol · Localização, QA e Desenvolvimento">
+    <meta property="og:description" content="Especialista em localização de software e QA, fundador da MRF Localização e Serviços e criador do Sideboardy.">
+    <meta property="og:image" content="https://matheusrayol.com/assets/img/matheus.jpg">
+    <meta name="twitter:card" content="summary">
     <meta name="facebook-domain-verification" content="gzxtdl73rl126pv0uuynq66aog4gp7" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matheus Rayol",
+        "url": "https://matheusrayol.com",
+        "image": "https://matheusrayol.com/assets/img/matheus.jpg",
+        "jobTitle": "Especialista em Localização de Software e QA",
+        "email": "mailto:falecom@matheusrayol.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Belo Horizonte", "addressCountry": "BR" },
+        "worksFor": { "@type": "Organization", "name": "MRF Localização e Serviços", "url": "https://mrf.services" },
+        "sameAs": ["https://github.com/matheusrayol", "https://linkedin.com/in/matheusrayol", "https://instagram.com/matheusrayolf", "https://twitter.com/matheusrayolf"]
+    }
+    </script>
 </head>
 
-<body><i class="fas fa-bars mobile-nav-toggle d-xl-none"></i>
-    <header id="header" class="d-flex flex-column justify-content-center">
-        <nav id="navbar" class="navbar nav-menu">
-            <ul>
-                <li><a class="nav-link scrollto active" href="#hero"><i class="fas fa-home"></i><span>Início</span></a></li>
-                <li><a class="nav-link scrollto" href="#sobre"><i class="fas fa-info-circle"></i><span>Sobre</span></a></li>
-                <li><a class="nav-link scrollto" href="#experiencia"><i class="fas fa-hands-helping"></i><span>Experiência</span></a></li>
-                <li><a class="nav-link scrollto" href="#formacao"><i class="fas fa-university"></i><span>Formação</span></a></li>
-                <li><a class="nav-link scrollto" href="#portfolio"><i class="fas fa-images"></i><span>Portfolio</span></a></li>
-                <li><a class="nav-link scrollto" href="#contato"><i class="fas fa-envelope"></i><span>Contato</span></a></li>
-                <li><a class="nav-link scrollto" href="matheusrayol.pdf"><i class="fas fa-download"></i><span>Download CV</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container"><img class="rounded-circle w-25 mb-5" src="assets/img/avatar.png">
-            <h1>Matheus Rayol</h1>
-            <p><span class="typed" data-typed-items="Estudante de Front-End, Analista de QA, Language Specialist"></span></p>
-            <div class="social-links"><a class="twitter" href="https://twitter.com/matheusrayolf"><i class="fab fa-twitter"></i></a><a class="instagram" href="https://instagram.com/matheusrayolf"><i class="fab fa-instagram"></i></a><a class="linkedin" href="https://linkedin.com/in/matheusrayol"><i class="fab fa-linkedin-in"></i></a><a class="github" href="https://github.com/matheusrayol"><i class="fab fa-github"></i></a></div>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 1.2h3.68l-8.04 9.19L24 22.8h-7.4l-5.8-7.58-6.63 7.58H.48l8.6-9.83L0 1.2h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.4h2.04L6.48 3.27H4.3l13.31 17.33Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm18 2-10 7L2 6"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 5-5m-5 5-5-5M4 21h16"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+        <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+        <symbol id="i-chevron-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></symbol>
+        <symbol id="i-chevron-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    </svg>
+
+    <header class="site-header" id="topo">
+        <div class="container nav-wrap">
+            <a class="brand" href="#inicio" aria-label="Matheus Rayol, início">
+                <span class="brand-mark">MR</span>
+                <span class="brand-name">Matheus Rayol</span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#arquivo">Arquivo</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+                    <svg class="ico ico-sun"><use href="#i-sun" /></svg>
+                    <svg class="ico ico-moon"><use href="#i-moon" /></svg>
+                </button>
+                <a class="btn btn-small btn-ghost hide-sm" href="matheusrayol.pdf" target="_blank" rel="noopener">
+                    <svg class="ico"><use href="#i-download" /></svg> CV
+                </a>
+                <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+                    <svg class="ico"><use href="#i-menu" /></svg>
+                </button>
+            </div>
         </div>
-    </section>
-    <main id="main">
-        <section id="sobre" class="about">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Sobre</h2>
-                    <p><em>Profissional especialista em controle de qualidade e gestão de localização de softwares. Nos últimos 11 anos trabalhei com localização de sistemas operacionais móveis, aplicativos, jogos e páginas web, bem como conduzindo testes funcionais e não funcionais para controle de qualidade da entrega ao usuário final. Além disso, tenho desenvolvido constantemente minhas habilidades no desenvolvimento Front-End e buscando mais qualificações em testes manuais e automatizados.</em><br></p>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- Início -->
+        <section class="hero" id="inicio">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="dot"></span> Disponível para novos projetos</p>
+                    <h1>Faço software falar <span class="grad">português</span> de verdade.</h1>
+                    <p class="lead">
+                        Sou Matheus Rayol, especialista em localização e qualidade de software para Brasil e Portugal.
+                        Fundador da <a href="https://mrf.services" target="_blank" rel="noopener">MRF Localização e Serviços</a>
+                        e criador do <a href="https://sideboardy.app" target="_blank" rel="noopener">Sideboardy</a>.
+                    </p>
+                    <p class="roles" aria-live="polite">
+                        <span class="roles-label">Atuo como</span>
+                        <span class="role-rotator" id="role-rotator">Especialista em Localização</span>
+                    </p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+                        <a class="btn btn-ghost" href="#contato">Vamos conversar</a>
+                    </div>
+                    <ul class="social" aria-label="Redes sociais">
+                        <li><a href="https://linkedin.com/in/matheusrayol" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin" /></svg></a></li>
+                        <li><a href="https://github.com/matheusrayol" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github" /></svg></a></li>
+                        <li><a href="https://instagram.com/matheusrayolf" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-instagram" /></svg></a></li>
+                        <li><a href="https://twitter.com/matheusrayolf" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="ico"><use href="#i-x" /></svg></a></li>
+                        <li><a href="mailto:falecom@matheusrayol.com" aria-label="E-mail"><svg class="ico"><use href="#i-mail" /></svg></a></li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 d-flex justify-content-center align-items-center"><img class="img-fluid" src="assets/img/matheusrayol.png" alt="Matheus Rayol Ferreira"></div>
-                    <div class="col-lg-8 d-flex flex-column justify-content-xxl-center pt-4 pt-lg-0 content">
-                        <h3>Front-End Developer, QA Analyst, Language Specialist</h3>
-                        <p class="fst-italic">Atualmente estudo <strong>Análise e Desenvolvimento de Sistemas</strong> pela Estácio, e faço parte do curso <strong>Certified Tech Developer</strong>, da Digital House Brasil em parceria com o Mercado Livre e a Globant.</p>
-                        <div class="row">
-                            <div class="col-12 col-xl-6">
-                                <ul>
-                                    <li><i class="fas fa-chevron-circle-right"></i>&nbsp;<strong>Aniversário:</strong>19 de Maio</li>
-                                    <li><i class="fas fa-chevron-circle-right"></i>&nbsp;<strong>Cidade:</strong>Belo Horizonte</li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-xl-6">
-                                <ul>
-                                    <li><i class="fas fa-chevron-circle-right"></i>&nbsp;<strong>Formação:</strong>Marketing Digital, ADS</li>
-                                    <li><i class="fas fa-chevron-circle-right"></i>&nbsp;<strong>E-mail:</strong>falecom@matheusrayol.com</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <p>Estou disponível para projetos como Freelancer nas áreas&nbsp; de tradução/localização, desenvolvimento de websites e planejamento/execução de casos de teste, em projetos curtos ou longos. Também estou disponível para contratação CLT/PJ nas minhas áreas de conhecimento.</p>
-                            </div>
-                        </div>
+                <div class="hero-visual">
+                    <div class="portrait">
+                        <picture>
+                            <source srcset="assets/img/matheus.webp" type="image/webp">
+                            <img src="assets/img/matheus.jpg" alt="Foto de Matheus Rayol" width="640" height="640">
+                        </picture>
                     </div>
-                </div>
-            </div>
-            <section id="soft-skills" class="skills section-bg">
-                <div class="container" data-aos="fade-up">
-                    <div class="section-title">
-                        <h2>Soft Skills</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col text-nowrap d-flex justify-content-center flex-wrap"><span class="soft-skills">Gestão de tempo</span><span class="soft-skills">Pensamento analítico</span><span class="soft-skills">Inovação</span><span class="soft-skills">Resiliência</span><span class="soft-skills">Adaptabilidade</span><span class="soft-skills">Carisma</span><span class="soft-skills">Versatilidade</span><span class="soft-skills">Criatividade</span><span class="soft-skills">Resolução de problemas</span><span class="soft-skills">Automotivação</span><span class="soft-skills">Trabalho em equipe</span><span class="soft-skills">Aprendizado ativo</span><span class="soft-skills">Liderança</span><span class="soft-skills">Influência social</span></div>
-                    </div>
-                </div>
-            </section>
-            <section id="hard-skills" class="skills section-bg">
-                <div class="container" data-aos="fade-up">
-                    <div class="section-title">
-                        <h2>Hard Skills</h2>
-                    </div>
-                    <div class="row skills-content">
-                        <div class="col-lg-6">
-                            <div class="progress"><span class="skill">HTML 5<i class="val">75%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">CSS 3<i class="val">80%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">Bootstrap<i class="val">70%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">UX/UI Design<i class="val">75%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="progress"><span class="skill">Wordpress<i class="val">65%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">JavaScript<i class="val">60%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">ShellScript<i class="val">85%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="progress"><span class="skill">SQL<i class="val">65%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row skills-content mt-5">
-                        <div class="col-lg-6 d-flex flex-column justify-content-between">
-                            <div>
-                                <h4 class="fw-bold">Tradução</h4>
-                                <p>Crowdin, OneSky, POEdit, memoQ, Transifex, Gestão de Memória de Tradução, Localização e Internacionalização</p>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold">Ferramentas de Desenvolvimento</h4>
-                                <p>MySQL Workbench, Visual Studio Code, Figma</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-flex flex-column justify-content-between">
-                            <div>
-                                <h4 class="fw-bold">Testes e Qualidade de Software</h4>
-                                <p>Selenium + WebDriver, Robot Framework</p>
-                            </div>
-                            <div>
-                                <h4 class="fw-bold">Gestão de Projetos</h4>
-                                <p>JIRA, Trello, Metodologias Ágeis, Scrum, Kanban</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section id="experiencia" class="resume" data-aos="fade-up">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Experiência Profissional</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Freelance Language Localization Specialist</h4>
-                            <h5>2016 - Presente</h5>
-                            <p><em>Beijing Xiaomi Mobile Software Co., Ltd.</em></p>
-                            <ul>
-                                <li>Mais de 2 milhões de palavras traduzidas&nbsp; em 30+ projetos;<br></li>
-                                <li>Principal especialista de localização para Português do Brasil e de Portugal;<br></li>
-                                <li>Responsável por testes funcionais e manuais para softwares e serviços da empresa para o Brasil e Portugal;<br></li>
-                                <li>Responsável pela análise de qualidade, aprovação e implementação de traduções terceirizadas;<br></li>
-                                <li>Vencedor por 2 anos consecutivos (2021-2022) do prêmio de Melhor Tradutor do Language Localization Center da empresa.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Analista de Mídias Sociais Freelancer</h4>
-                            <h5>2020 - 2021</h5>
-                            <p><em>Ecomud Soluções Ambientais e Pavimentação LTDA</em></p>
-                            <ul>
-                                <li>Responsável pela criação de conteúdo para redes sociais;<br></li>
-                                <li>Implementação e manutenção do website institucional;<br></li>
-                                <li>Acompanhamento de demandas com parceiros e monitoramento de desempenho.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Analista de Dados Freelancer</h4>
-                            <h5>2021</h5>
-                            <p><em>TransPerfect DataForce</em></p>
-                            <ul>
-                                <li>Transcrição e revisão de documentos.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Analista de Sucesso do Cliente Freelancer</h4>
-                            <h5>2020 - 2021</h5>
-                            <p><em>KNIT Technology Corporation</em></p>
-                            <ul>
-                                <li>Responsável por atendimento de pós venda nos canais de suporte;<br></li>
-                                <li>Solução de problemas e orientação de compra para o consumidor final;<br></li>
-                                <li>Atendimento em redes sociais.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Consultor Freelancer</h4>
-                            <h5>2018 - 2020</h5>
-                            <p><em>Comércio de Móveis Abreu LTDA</em></p>
-                            <ul>
-                                <li>Implementação de sistema de tickets para aumento da eficiência dos canais de suporte;<br></li>
-                                <li>Redução de falhas de hardware e software em 70% com aplicação de medidas preventivas;<br></li>
-                                <li>Organização e implementação de e-commerce regional da marca.<br></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Freelance Community Manager</h4>
-                            <h5>2016 - 2018</h5>
-                            <p><em>Xiaomi Technology Co., Ltd.</em></p>
-                            <ul>
-                                <li>Responsável pela interação com fãs da marca em plataformas de mídias sociais com taxa de resposta de 100%;<br></li>
-                                <li>Moderação e solução de problemas nos fóruns oficiais de suporte;<br></li>
-                                <li>Responsável por testes funcionais e manuais para softwares e serviços da empresa para o Brasil e Portugal;<br></li>
-                                <li>Contato principal entre a Xiaomi e seus fã-clubes e projetos não oficiais no Brasil.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Analista de Suporte Técnico</h4>
-                            <h5>2015 - 2016</h5>
-                            <p><em>Xiaomi do Brasil Tecnologia LTDA</em></p>
-                            <ul>
-                                <li>Líder do projeto de localização para Português Brasileiro, gerenciando parceiros terceirizados e contribuições feitas por fãs;<br></li>
-                                <li>Especialista mais bem avaliado com 98% de eficiência em projetos internos e mais de 2 milhões de palavras traduzidas e revisadas;<br></li>
-                                <li>Manutenção da taxa de resposta em canais de suporte de terceiros em 100%;<br></li>
-                                <li>Coordenação com canais de suporte terceirizados para aumento solução de problemas no primeiro contato em 20%;<br></li>
-                                <li>Responsável por testes manuais para controle de qualidade da tradução/localização de todos os softwares embarcados em dispositivos móveis comercializados pela empresa.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Assistente Administrativo</h4>
-                            <h5>2014 - 2015</h5>
-                            <p><em>Comércio de Móveis Abreu LTDA</em></p>
-                            <ul>
-                                <li>Atendimento receptivo de clientes;<br></li>
-                                <li>Responsável pelo departamento de suporte técnico, atuando como ligação entre clientes da empresa e revendedores;<br></li>
-                                <li>Redução de reincidência em serviços de assistência técnica em 85%.<br></li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Analista de Suporte Técnico</h4>
-                            <h5>2010 - 2013</h5>
-                            <p><em>Leopoldina Net Telecom LTDA</em></p>
-                            <ul>
-                                <li>Responsável pela manutenção de hardware e software da empresa e clientes, reduzindo falhas em 40% através de medidas preventivas;<br></li>
-                                <li>Instalação e configuração de redes cabeadas e wireless;<br></li>
-                                <li>Implementação, gestão e manutenção de sistemas de automação comercial;<br></li>
-                                <li>Suporte local e remoto para clientes de internet;<br></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <div class="float-chip chip-a">pt-BR <span>✓</span></div>
+                    <div class="float-chip chip-b">pt-PT <span>✓</span></div>
+                    <div class="float-chip chip-c"><svg class="ico"><use href="#i-pin" /></svg> Belo Horizonte</div>
                 </div>
             </div>
-        </section>
-        <section id="formacao" class="resume" data-aos="fade-up">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Formação Acadêmica</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Análise e Desenvolvimento de Sistemas</h4>
-                            <h5>2022 - Presente</h5>
-                            <p><em>Universidade Estácio de Sá</em></p>
-                            <ul></ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Certified Tech Developer</h4>
-                            <h5>2021 - Presente</h5>
-                            <p><em>Digital House do Brasil</em></p>
-                            <ul></ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="resume-item">
-                            <h4 class="fw-bold">Marketing Digital</h4>
-                            <h5>2020 - 2021</h5>
-                            <p><em>Universidade Norte do Paraná - UNOPAR</em></p>
-                            <ul></ul>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="container">
+                <dl class="stats reveal">
+                    <div><dt>10+</dt><dd>anos em localização e QA</dd></div>
+                    <div><dt>2M+</dt><dd>palavras traduzidas e revisadas</dd></div>
+                    <div><dt>30+</dt><dd>projetos de localização</dd></div>
+                    <div><dt>2×</dt><dd>Melhor Tradutor no Language Localization Center da Xiaomi</dd></div>
+                </dl>
             </div>
         </section>
-        <section id="portfolio" class="portfolio section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Portfolio</h2>
+
+        <!-- Sobre -->
+        <section class="section" id="sobre">
+            <div class="container about-grid">
+                <div class="reveal">
+                    <p class="kicker">Sobre</p>
+                    <h2>Entre a linguagem e o código.</h2>
+                    <p>
+                        Há mais de uma década trabalho levando sistemas operacionais móveis, aplicativos, jogos e sites
+                        para o português do Brasil e de Portugal, com foco em qualidade: testes funcionais, LQA e
+                        revisão de ponta a ponta antes da entrega ao usuário final.
+                    </p>
+                    <p>
+                        Essa experiência virou a <strong>MRF Localização e Serviços</strong>, minha empresa de localização,
+                        testes LQA e inteligência de mercado local. Em paralelo, sigo desenvolvendo produtos web, como
+                        o <strong>Sideboardy</strong>, uma plataforma para colecionadores de Magic: The Gathering no Brasil.
+                    </p>
+                    <p>
+                        Estou disponível para projetos de tradução e localização, testes de software e desenvolvimento web,
+                        curtos ou longos, como freelancer ou via MRF.
+                    </p>
+                    <ul class="facts">
+                        <li><span>Cidade</span> Belo Horizonte, MG</li>
+                        <li><span>E-mail</span> <a href="mailto:falecom@matheusrayol.com">falecom@matheusrayol.com</a></li>
+                        <li><span>Formação</span> ADS · Marketing Digital</li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                        <ul id="portfolio-filters">
-                            <li class="filter-active" data-filter="*">Todos</li>
-                            <li data-filter=".filter-projetos">Projetos</li>
-                            <li data-filter=".filter-bootcamps">Bootcamps</li>
-                            <li data-filter=".filter-institucionais">Institucionais</li>
+
+                <div class="skills reveal">
+                    <div class="skill-card">
+                        <h3>Localização &amp; i18n</h3>
+                        <ul class="tags">
+                            <li>Localização (l10n)</li><li>Internacionalização (i18n)</li><li>LQA</li><li>Memória de tradução</li>
+                            <li>Crowdin</li><li>memoQ</li><li>Transifex</li><li>POEdit</li><li>OneSky</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Qualidade de software</h3>
+                        <ul class="tags">
+                            <li>Testes funcionais</li><li>Testes manuais</li><li>Casos de teste</li>
+                            <li>Selenium WebDriver</li><li>Robot Framework</li><li>Auditoria de UX</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Desenvolvimento</h3>
+                        <ul class="tags">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Tailwind CSS</li><li>Vite</li>
+                            <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>SQL</li><li>Shell Script</li><li>WordPress</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Gestão &amp; ferramentas</h3>
+                        <ul class="tags">
+                            <li>Jira</li><li>Trello</li><li>Scrum</li><li>Kanban</li><li>Figma</li><li>VS Code</li><li>Git</li>
                         </ul>
                     </div>
                 </div>
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-projetos">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/todoapp/todoapp.png">
-                            <div class="portfolio-info">
-                                <h4>App To-Do</h4>
-                                <p>Front-End II - Certified Tech Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/todoapp/todoapp.png" data-gallery="portfolioGallery" title="App To-Do"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/todoapp.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
+            </div>
+        </section>
+
+        <!-- Projetos em destaque -->
+        <section class="section section-alt" id="projetos">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="kicker">Projetos</p>
+                    <h2>O que estou construindo agora.</h2>
+                </div>
+
+                <article class="feature reveal">
+                    <div class="feature-media media-mrf" aria-hidden="true">
+                        <div class="mrf-board">
+                            <div class="mrf-row"><span class="k">settings.title</span><span class="v">Configurações</span><span class="badge ok">pt-BR</span></div>
+                            <div class="mrf-row"><span class="k">settings.title</span><span class="v">Definições</span><span class="badge ok">pt-PT</span></div>
+                            <div class="mrf-row"><span class="k">checkout.cta</span><span class="v">Finalizar compra</span><span class="badge warn">LQA</span></div>
+                            <div class="mrf-row"><span class="k">onboarding.skip</span><span class="v">Pular</span><span class="badge ok">pt-BR</span></div>
+                            <div class="mrf-row"><span class="k">onboarding.skip</span><span class="v">Saltar</span><span class="badge ok">pt-PT</span></div>
+                        </div>
+                        <div class="mrf-logo">MRF<span>.services</span></div>
+                    </div>
+                    <div class="feature-body">
+                        <p class="feature-meta"><span class="pill">Empresa</span> Fundador</p>
+                        <h3>MRF Localização e Serviços</h3>
+                        <p>
+                            Empresa especializada em localização de softwares, testes LQA e inteligência de mercado local
+                            para Brasil e Portugal. A MRF ajuda produtos internacionais a chegarem aos dois mercados com
+                            linguagem natural, culturalmente adequada e sem bugs de tradução.
+                        </p>
+                        <ul class="checklist">
+                            <li>Localização de software, apps e jogos (l10n e i18n)</li>
+                            <li>Testes de qualidade linguística (LQA) e funcionais</li>
+                            <li>Tradução técnica e curadoria cultural</li>
+                            <li>Inteligência de mercado: social listening, auditorias de UX e benchmarking</li>
+                        </ul>
+                        <a class="btn btn-primary" href="https://mrf.services" target="_blank" rel="noopener">
+                            Visitar mrf.services <svg class="ico"><use href="#i-arrow" /></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="feature feature-flip reveal">
+                    <div class="feature-media media-sideboardy" aria-hidden="true">
+                        <img class="sb-logo" src="assets/img/projects/sideboardy/sideboardy-logo-fundo-escuro.svg" alt="" width="519" height="120">
+                        <div class="sb-ui">
+                            <div class="sb-card"><span class="sb-name">Sol Ring</span><span class="sb-set">CMR</span><span class="sb-price">R$ 9,90</span></div>
+                            <div class="sb-card"><span class="sb-name">Arcane Signet</span><span class="sb-set">CMM</span><span class="sb-price">R$ 4,50</span></div>
+                            <div class="sb-card foil"><span class="sb-name">Command Tower</span><span class="sb-set">Foil</span><span class="sb-price">R$ 12,00</span></div>
+                            <div class="sb-total"><span>Valor do acervo</span><strong>R$ 26,40</strong></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-bootcamps">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/dio/dino.png">
-                            <div class="portfolio-info">
-                                <h4>Jogo Dino</h4>
-                                <p>Bootcamp Órbi Web Games Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/dio/dino.png" data-gallery="portfolioGallery" title="Jogo Dino"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/dio-dino.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
+                    <div class="feature-body">
+                        <p class="feature-meta"><span class="pill pill-amber">Em beta</span> Produto · Full-stack</p>
+                        <h3>Sideboardy</h3>
+                        <p>
+                            Seu acervo de cartas com cotações locais. Plataforma para organizar coleções, pastas de troca
+                            e decks de Magic: The Gathering com preços em Reais da LigaMagic, pensada para a comunidade brasileira.
+                        </p>
+                        <ul class="checklist">
+                            <li>Cotações em BRL atualizadas em segundo plano, com fallback via Scryfall</li>
+                            <li>Catálogo local com mais de 450 mil cartas e busca em milissegundos</li>
+                            <li>Importação de Moxfield, Archidekt, ManaBox, Delver Lens e outros, com exportação pronta para a LigaMagic</li>
+                            <li>Decks com validação de Commander, perfis públicos, amigos, seguidores, notícias e fórum</li>
+                        </ul>
+                        <ul class="tags tags-inline">
+                            <li>React 19</li><li>Tailwind CSS</li><li>Vite</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Crawlee</li>
+                        </ul>
+                        <a class="btn btn-primary" href="https://sideboardy.app" target="_blank" rel="noopener">
+                            Acessar sideboardy.app <svg class="ico"><use href="#i-arrow" /></svg>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-bootcamps">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/dio/spaceshooter.png">
-                            <div class="portfolio-info">
-                                <h4>Jogo Space Shooter</h4>
-                                <p>Bootcamp Órbi Web Games Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/dio/spaceshooter.png" data-gallery="portfolioGallery" title="Jogo Space Shooter"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/dio-spaceshooter.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-bootcamps">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/dio/genius.png">
-                            <div class="portfolio-info">
-                                <h4>Jogo Genius</h4>
-                                <p>Bootcamp Órbi Web Games Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/dio/genius.png" data-gallery="portfolioGallery" title="App To-Do"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/dio-genius.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-bootcamps">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/dio/resgate.png">
-                            <div class="portfolio-info">
-                                <h4>Jogo Resgate</h4>
-                                <p>Bootcamp Órbi Web Games Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/dio/resgate.png" data-gallery="portfolioGallery" title="Jogo Resgate"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/dio-resgate.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-bootcamps">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/dio/jogodavelha.png">
-                            <div class="portfolio-info">
-                                <h4>Jogo da Velha</h4>
-                                <p>Bootcamp Órbi Web Games Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/dio/jogodavelha.png" data-gallery="portfolioGallery" title="Jogo da Velha"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/dio-velha.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-projetos">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/gamegeek/gamegeek.jpg">
-                            <div class="portfolio-info">
-                                <h4>Game Geek</h4>
-                                <p>Front-End II - Certified Tech Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/gamegeek/gamegeek.jpg" data-gallery="portfolioGallery" title="Game Geek"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/gamegeek.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-projetos">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/streamy/streamy.jpg">
-                            <div class="portfolio-info">
-                                <h4>Streamy</h4>
-                                <p>Front-End I - Certified Tech Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/streamy/streamy.jpg" data-gallery="portfolioGallery" title="Streamy"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/streamy.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-projetos">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/minhacidadev2/minhacidadev2.png">
-                            <div class="portfolio-info">
-                                <h4>Minha Cidade v2</h4>
-                                <p>Front-End I - Certified Tech Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/minhacidadev2/minhacidadev2.png" data-gallery="portfolioGallery" title="Minha Cidade V2"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/minhacidadev2.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-projetos">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/minhacidade/minhacidade.png">
-                            <div class="portfolio-info">
-                                <h4>Minha Cidade</h4>
-                                <p>Front-End I - Certified Tech Developer</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/minhacidade/minhacidade.png" data-gallery="portfolioGallery" title="Minha Cidade"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/minhacidade.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-institucionais">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/ecomud/ecomud.png">
-                            <div class="portfolio-info">
-                                <h4>Ecomud</h4>
-                                <p>Wordpress + Avada</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/ecomud/ecomud.png" data-gallery="portfolioGallery" title="Institucional Ecomud"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="projects/ecomud.html" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 portfolio-item filter-institucionais">
-                        <div class="portfolio-wrap"><img class="img-fluid" src="assets/img/portfolio/xmbr/xmbr.png">
-                            <div class="portfolio-info">
-                                <h4>XMBR</h4>
-                                <p>Wordpress + newspaper</p>
-                                <div class="portfolio-links"><a class="portfolio-lightbox" href="assets/img/portfolio/xmbr/xmbr.png" data-gallery="portfolioGallery" title="Institucional XMBR"><i class="fas fa-plus"></i></a><a class="portfolio-details-lightbox" href="https://xmbr.org" data-glightbox="type: external" title="Detalhes do Projeto"><i class="fas fa-link"></i></a></div>
-                            </div>
-                        </div>
+                </article>
+
+                <div class="mini-grid">
+                    <a class="mini reveal" href="https://github.com/matheusrayol/HyperOS-Brazilian-Portuguese" target="_blank" rel="noopener">
+                        <p class="feature-meta"><span class="pill">Comunidade</span> Localização</p>
+                        <h3>HyperOS em Português</h3>
+                        <p>Projeto de tradução do HyperOS (China e Global) para o português do Brasil, mantido pela comunidade XMBR.</p>
+                        <span class="mini-link">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <a class="mini reveal" href="https://github.com/matheusrayol/HOSK" target="_blank" rel="noopener">
+                        <p class="feature-meta"><span class="pill">Open source</span> Ferramenta</p>
+                        <h3>HOSK</h3>
+                        <p>HyperOS Kitchen: ferramenta para modificação de ROMs HyperOS.</p>
+                        <span class="mini-link">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                    <a class="mini reveal" href="https://xmbr.org" target="_blank" rel="noopener">
+                        <p class="feature-meta"><span class="pill">Comunidade</span> Conteúdo</p>
+                        <h3>XMBR</h3>
+                        <p>Portal da comunidade brasileira de usuários Xiaomi, com artigos, tutoriais e traduções do sistema.</p>
+                        <span class="mini-link">Visitar xmbr.org <svg class="ico"><use href="#i-arrow" /></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência -->
+        <section class="section" id="experiencia">
+            <div class="container exp-grid">
+                <div class="section-head sticky-head reveal">
+                    <p class="kicker">Trajetória</p>
+                    <h2>Experiência profissional.</h2>
+                    <p class="muted">Uma carreira construída entre suporte, comunidade, localização e qualidade.</p>
+                    <a class="btn btn-ghost btn-small" href="matheusrayol.pdf" target="_blank" rel="noopener">
+                        <svg class="ico"><use href="#i-download" /></svg> Baixar currículo
+                    </a>
+                </div>
+
+                <ol class="timeline">
+                    <li class="reveal">
+                        <span class="when">Atual</span>
+                        <h3>Fundador</h3>
+                        <p class="where">MRF Localização e Serviços</p>
+                        <ul>
+                            <li>Localização de software, testes LQA e inteligência de mercado para Brasil e Portugal.</li>
+                            <li>Tradução técnica, i18n/l10n e curadoria cultural para produtos digitais.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2016 · Presente</span>
+                        <h3>Freelance Language Localization Specialist</h3>
+                        <p class="where">Beijing Xiaomi Mobile Software Co., Ltd.</p>
+                        <ul>
+                            <li>Mais de 2 milhões de palavras traduzidas em 30+ projetos.</li>
+                            <li>Principal especialista de localização para português do Brasil e de Portugal.</li>
+                            <li>Testes funcionais e manuais de softwares e serviços para os dois mercados.</li>
+                            <li>Análise de qualidade, aprovação e implementação de traduções terceirizadas.</li>
+                            <li>Prêmio de Melhor Tradutor do Language Localization Center por dois anos seguidos (2021 e 2022).</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2020 · 2021</span>
+                        <h3>Analista de Mídias Sociais</h3>
+                        <p class="where">Ecomud Soluções Ambientais e Pavimentação</p>
+                        <ul>
+                            <li>Criação de conteúdo, implementação e manutenção do site institucional.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2020 · 2021</span>
+                        <h3>Analista de Sucesso do Cliente</h3>
+                        <p class="where">KNIT Technology Corporation</p>
+                        <ul>
+                            <li>Pós-venda, solução de problemas e atendimento em redes sociais.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2021</span>
+                        <h3>Analista de Dados</h3>
+                        <p class="where">TransPerfect DataForce</p>
+                        <ul>
+                            <li>Transcrição e revisão de documentos.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2018 · 2020</span>
+                        <h3>Consultor</h3>
+                        <p class="where">Comércio de Móveis Abreu</p>
+                        <ul>
+                            <li>Sistema de tickets para os canais de suporte e e-commerce regional da marca.</li>
+                            <li>Redução de 70% nas falhas de hardware e software com medidas preventivas.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2016 · 2018</span>
+                        <h3>Community Manager</h3>
+                        <p class="where">Xiaomi Technology Co., Ltd.</p>
+                        <ul>
+                            <li>Interação com fãs nas redes sociais com taxa de resposta de 100%.</li>
+                            <li>Moderação dos fóruns oficiais e ponte com fã-clubes e projetos não oficiais no Brasil.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2015 · 2016</span>
+                        <h3>Analista de Suporte Técnico</h3>
+                        <p class="where">Xiaomi do Brasil Tecnologia</p>
+                        <ul>
+                            <li>Líder do projeto de localização para português brasileiro, com parceiros e contribuições da comunidade.</li>
+                            <li>Aumento de 20% na solução de problemas no primeiro contato.</li>
+                        </ul>
+                    </li>
+                    <li class="reveal">
+                        <span class="when">2010 · 2015</span>
+                        <h3>Suporte técnico e administrativo</h3>
+                        <p class="where">Leopoldina Net Telecom · Comércio de Móveis Abreu</p>
+                        <ul>
+                            <li>Manutenção de hardware, redes e sistemas de automação comercial; redução de falhas em 40%.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="edu reveal">
+                    <h3>Formação</h3>
+                    <div class="edu-grid">
+                        <div><span class="when">Desde 2022</span><strong>Análise e Desenvolvimento de Sistemas</strong><span>Universidade Estácio de Sá</span></div>
+                        <div><span class="when">Desde 2021</span><strong>Certified Tech Developer</strong><span>Digital House Brasil, com Mercado Livre e Globant</span></div>
+                        <div><span class="when">2020 · 2021</span><strong>Marketing Digital</strong><span>UNOPAR</span></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contato" class="contact vh-100">
+
+        <!-- Arquivo -->
+        <section class="section section-alt" id="arquivo">
             <div class="container">
-                <div class="section-title">
-                    <h2>Contato</h2>
+                <div class="section-head reveal">
+                    <p class="kicker">Arquivo</p>
+                    <h2>Projetos anteriores.</h2>
+                    <p class="muted">Trabalhos de cursos, bootcamps e sites institucionais. Clique para ver detalhes e capturas.</p>
                 </div>
-                <div class="row d-xl-flex justify-content-xl-center mt-1">
-                    <div class="col-lg-6">
-                        <form id="contact-form" action="https://formspree.io/f/xdobpeay" method="POST">
-                            <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Nome"></div>
-                            <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="E-mail"></div>
-                            <div class="mb-3"><textarea class="form-control" id="message-2" name="message" rows="6" placeholder="Mensagem"></textarea></div>
-                            <div><button class="btn d-block w-100" type="submit">Enviar</button></div>
-                            <div class="mt-3">
-                                <p id="form-status"></p>
-                            </div>
-                        </form>
+                <div class="filters" role="tablist" aria-label="Filtrar projetos">
+                    <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                    <button class="filter" data-filter="curso" role="tab" aria-selected="false">Cursos</button>
+                    <button class="filter" data-filter="bootcamp" role="tab" aria-selected="false">Bootcamps</button>
+                    <button class="filter" data-filter="institucional" role="tab" aria-selected="false">Institucionais</button>
+                </div>
+                <div class="archive" id="archive"></div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="section" id="contato">
+            <div class="container contact-grid">
+                <div class="reveal">
+                    <p class="kicker">Contato</p>
+                    <h2>Tem um projeto em mente?</h2>
+                    <p class="muted">
+                        Localização, testes ou um site novo: me conte o que você precisa e eu respondo o quanto antes.
+                    </p>
+                    <a class="contact-mail" href="mailto:falecom@matheusrayol.com">
+                        <svg class="ico"><use href="#i-mail" /></svg> falecom@matheusrayol.com
+                    </a>
+                    <ul class="social">
+                        <li><a href="https://linkedin.com/in/matheusrayol" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin" /></svg></a></li>
+                        <li><a href="https://github.com/matheusrayol" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github" /></svg></a></li>
+                        <li><a href="https://instagram.com/matheusrayolf" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-instagram" /></svg></a></li>
+                        <li><a href="https://twitter.com/matheusrayolf" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="ico"><use href="#i-x" /></svg></a></li>
+                    </ul>
+                </div>
+                <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xdobpeay" method="POST">
+                    <div class="field-row">
+                        <label>Nome<input type="text" name="name" autocomplete="name" required></label>
+                        <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
                     </div>
-                </div>
+                    <label>Assunto<input type="text" name="subject" required></label>
+                    <label>Mensagem<textarea name="message" rows="5" required></textarea></label>
+                    <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+                    <p class="form-status" id="form-status" role="status"></p>
+                </form>
             </div>
         </section>
     </main>
-    <footer id="footer">
-        <div class="container">
-            <h3>Matheus Rayol</h3>
-            <div class="social-links"><a href="https://twitter.com/matheusrayolf"><i class="fab fa-twitter"></i></a><a href="https://facebook.com/matheusrayolf"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/matheusrayollf"><i class="fab fa-instagram"></i></a><a href="https://github.com/matheusrayol"><i class="fab fa-github"></i></a><a href="https://linkedin.com/in/matheusrayol"><i class="fab fa-linkedin"></i></a></div>
-            <div class="credits">
-                <p>Partes do código desenvolvido por <a href="https://bootstrapmade.com/" target="_blank">BootStrapMade</a></p>
-            </div>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>© <span id="year">2026</span> Matheus Rayol · Belo Horizonte, Brasil</p>
+            <p><a href="https://mrf.services" target="_blank" rel="noopener">mrf.services</a> · <a href="https://sideboardy.app" target="_blank" rel="noopener">sideboardy.app</a> · <a href="#inicio">Voltar ao topo</a></p>
         </div>
     </footer>
-    <div id="preloader" hidden="true"></div><a class="back-to-top d-flex align-items-center justify-content-center" href="#"><i class="fas fa-arrow-up"></i></a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+
+    <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+        <div class="modal-inner">
+            <button class="icon-btn modal-close" type="button" data-close aria-label="Fechar"><svg class="ico"><use href="#i-close" /></svg></button>
+            <div class="gallery">
+                <img id="modal-img" src="" alt="">
+                <button class="icon-btn gal-prev" type="button" aria-label="Imagem anterior"><svg class="ico"><use href="#i-chevron-l" /></svg></button>
+                <button class="icon-btn gal-next" type="button" aria-label="Próxima imagem"><svg class="ico"><use href="#i-chevron-r" /></svg></button>
+                <span class="gal-count" id="modal-count"></span>
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <dl id="modal-meta"></dl>
+                <div class="modal-links" id="modal-links"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
