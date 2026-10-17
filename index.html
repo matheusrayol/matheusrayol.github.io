@@ -13,6 +13,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:url" content="https://matheusrayol.com/">
     <meta property="og:title" content="Matheus Rayol · Localização, QA e Desenvolvimento">
     <meta property="og:description" content="Especialista em localização de software e QA, fundador da MRF Localização e Serviços e criador do Sideboardy.">
@@ -52,7 +53,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <a class="skip-link" href="#conteudo" data-i18n="skip.text">Pular para o conteúdo</a>
 
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
         <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
@@ -73,19 +74,22 @@
 
     <header class="site-header" id="topo">
         <div class="container nav-wrap">
-            <a class="brand" href="#inicio" aria-label="Matheus Rayol, início">
+            <a class="brand" href="#inicio" aria-label="Matheus Rayol, início" data-i18n-attr="brand">
                 <span class="brand-mark">MR</span>
                 <span class="brand-name">Matheus Rayol</span>
             </a>
-            <nav class="nav" id="nav" aria-label="Principal">
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#experiencia">Experiência</a>
-                <a href="#arquivo">Arquivo</a>
-                <a href="#contato">Contato</a>
+            <nav class="nav" id="nav" aria-label="Principal" data-i18n-attr="nav">
+                <a href="#sobre" data-i18n="nav.about">Sobre</a>
+                <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+                <a href="#experiencia" data-i18n="nav.exp">Experiência</a>
+                <a href="#arquivo" data-i18n="nav.archive">Arquivo</a>
+                <a href="#contato" data-i18n="nav.contact">Contato</a>
             </nav>
             <div class="nav-actions">
-                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+                <button class="icon-btn lang-btn" id="lang-toggle" type="button" aria-label="View in English" title="View in English">
+                    <span>EN</span>
+                </button>
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro" data-i18n-attr="theme">
                     <svg class="ico ico-sun"><use href="#i-sun" /></svg>
                     <svg class="ico ico-moon"><use href="#i-moon" /></svg>
                 </button>
@@ -106,34 +110,34 @@
             <div class="hero-glow" aria-hidden="true"></div>
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow"><span class="dot"></span> Disponível para novos projetos</p>
-                    <h1>Faço software falar <span class="grad">português</span> de verdade.</h1>
-                    <p class="lead">
+                    <p class="eyebrow" data-i18n="hero.eyebrow"><span class="dot"></span> Disponível para novos projetos</p>
+                    <h1 data-i18n="hero.title">Faço software falar <span class="grad">português</span> de verdade.</h1>
+                    <p class="lead" data-i18n="hero.lead">
                         Sou Matheus Rayol, especialista em localização e qualidade de software para Brasil e Portugal.
                         Fundador da <a href="https://mrf.services" target="_blank" rel="noopener">MRF Localização e Serviços</a>
                         e criador do <a href="https://sideboardy.app" target="_blank" rel="noopener">Sideboardy</a>.
                     </p>
                     <p class="roles" aria-live="polite">
-                        <span class="roles-label">Atuo como</span>
+                        <span class="roles-label" data-i18n="hero.roles">Atuo como</span>
                         <span class="role-rotator" id="role-rotator">Especialista em Localização</span>
                     </p>
                     <div class="hero-cta">
-                        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
-                        <a class="btn btn-ghost" href="#contato">Vamos conversar</a>
+                        <a class="btn btn-primary" href="#projetos" data-i18n="hero.cta1">Ver projetos</a>
+                        <a class="btn btn-ghost" href="#contato" data-i18n="hero.cta2">Vamos conversar</a>
                     </div>
-                    <ul class="social" aria-label="Redes sociais">
+                    <ul class="social" aria-label="Redes sociais" data-i18n-attr="social">
                         <li><a href="https://linkedin.com/in/matheusrayol" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin" /></svg></a></li>
                         <li><a href="https://github.com/matheusrayol" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico"><use href="#i-github" /></svg></a></li>
                         <li><a href="https://instagram.com/matheusrayolf" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-instagram" /></svg></a></li>
                         <li><a href="https://twitter.com/matheusrayolf" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="ico"><use href="#i-x" /></svg></a></li>
-                        <li><a href="mailto:falecom@matheusrayol.com" aria-label="E-mail"><svg class="ico"><use href="#i-mail" /></svg></a></li>
+                        <li><a href="mailto:falecom@matheusrayol.com" aria-label="E-mail" data-i18n-attr="email"><svg class="ico"><use href="#i-mail" /></svg></a></li>
                     </ul>
                 </div>
                 <div class="hero-visual">
                     <div class="portrait">
                         <picture>
                             <source srcset="assets/img/matheus.webp" type="image/webp">
-                            <img src="assets/img/matheus.jpg" alt="Foto de Matheus Rayol" width="640" height="640">
+                            <img src="assets/img/matheus.jpg" alt="Foto de Matheus Rayol" width="640" height="640" data-i18n-attr="photo">
                         </picture>
                     </div>
                     <div class="float-chip chip-a">pt-BR <span>✓</span></div>
@@ -144,10 +148,10 @@
 
             <div class="container">
                 <dl class="stats reveal">
-                    <div><dt>10+</dt><dd>anos em localização e QA</dd></div>
-                    <div><dt>2M+</dt><dd>palavras traduzidas e revisadas</dd></div>
-                    <div><dt>30+</dt><dd>projetos de localização</dd></div>
-                    <div><dt>2×</dt><dd>Melhor Tradutor no Language Localization Center da Xiaomi</dd></div>
+                    <div><dt>10+</dt><dd data-i18n="stat.1">anos em localização e QA</dd></div>
+                    <div><dt>2M+</dt><dd data-i18n="stat.2">palavras traduzidas e revisadas</dd></div>
+                    <div><dt>30+</dt><dd data-i18n="stat.3">projetos de localização</dd></div>
+                    <div><dt>2×</dt><dd data-i18n="stat.4">Melhor Tradutor no Language Localization Center da Xiaomi</dd></div>
                 </dl>
             </div>
         </section>
@@ -156,53 +160,53 @@
         <section class="section" id="sobre">
             <div class="container about-grid">
                 <div class="reveal">
-                    <p class="kicker">Sobre</p>
-                    <h2>Entre a linguagem e o código.</h2>
-                    <p>
+                    <p class="kicker" data-i18n="about.kicker">Sobre</p>
+                    <h2 data-i18n="about.title">Entre a linguagem e o código.</h2>
+                    <p data-i18n="about.p1">
                         Há mais de uma década trabalho levando sistemas operacionais móveis, aplicativos, jogos e sites
                         para o português do Brasil e de Portugal, com foco em qualidade: testes funcionais, LQA e
                         revisão de ponta a ponta antes da entrega ao usuário final.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         Essa experiência virou a <strong>MRF Localização e Serviços</strong>, minha empresa de localização,
                         testes LQA e inteligência de mercado local. Em paralelo, sigo desenvolvendo produtos web, como
                         o <strong>Sideboardy</strong>, uma plataforma para colecionadores de Magic: The Gathering no Brasil.
                     </p>
-                    <p>
+                    <p data-i18n="about.p3">
                         Estou disponível para projetos de tradução e localização, testes de software e desenvolvimento web,
                         curtos ou longos, como freelancer ou via MRF.
                     </p>
                     <ul class="facts">
-                        <li><span>Cidade</span> Belo Horizonte, MG</li>
-                        <li><span>E-mail</span> <a href="mailto:falecom@matheusrayol.com">falecom@matheusrayol.com</a></li>
-                        <li><span>Formação</span> ADS · Marketing Digital</li>
+                        <li data-i18n="about.city"><span>Cidade</span> Belo Horizonte, MG</li>
+                        <li data-i18n="about.email"><span>E-mail</span> <a href="mailto:falecom@matheusrayol.com">falecom@matheusrayol.com</a></li>
+                        <li data-i18n="about.edu"><span>Formação</span> ADS · Marketing Digital</li>
                     </ul>
                 </div>
 
                 <div class="skills reveal">
                     <div class="skill-card">
-                        <h3>Localização &amp; i18n</h3>
+                        <h3 data-i18n="skills.l10n">Localização &amp; i18n</h3>
                         <ul class="tags">
-                            <li>Localização (l10n)</li><li>Internacionalização (i18n)</li><li>LQA</li><li>Memória de tradução</li>
+                            <li data-i18n="tag.l10n">Localização (l10n)</li><li data-i18n="tag.i18n">Internacionalização (i18n)</li><li>LQA</li><li data-i18n="tag.tm">Memória de tradução</li>
                             <li>Crowdin</li><li>memoQ</li><li>Transifex</li><li>POEdit</li><li>OneSky</li>
                         </ul>
                     </div>
                     <div class="skill-card">
-                        <h3>Qualidade de software</h3>
+                        <h3 data-i18n="skills.qa">Qualidade de software</h3>
                         <ul class="tags">
-                            <li>Testes funcionais</li><li>Testes manuais</li><li>Casos de teste</li>
-                            <li>Selenium WebDriver</li><li>Robot Framework</li><li>Auditoria de UX</li>
+                            <li data-i18n="tag.func">Testes funcionais</li><li data-i18n="tag.manual">Testes manuais</li><li data-i18n="tag.cases">Casos de teste</li>
+                            <li>Selenium WebDriver</li><li>Robot Framework</li><li data-i18n="tag.ux">Auditoria de UX</li>
                         </ul>
                     </div>
                     <div class="skill-card">
-                        <h3>Desenvolvimento</h3>
+                        <h3 data-i18n="skills.dev">Desenvolvimento</h3>
                         <ul class="tags">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Tailwind CSS</li><li>Vite</li>
                             <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>SQL</li><li>Shell Script</li><li>WordPress</li>
                         </ul>
                     </div>
                     <div class="skill-card">
-                        <h3>Gestão &amp; ferramentas</h3>
+                        <h3 data-i18n="skills.mgmt">Gestão &amp; ferramentas</h3>
                         <ul class="tags">
                             <li>Jira</li><li>Trello</li><li>Scrum</li><li>Kanban</li><li>Figma</li><li>VS Code</li><li>Git</li>
                         </ul>
@@ -215,8 +219,8 @@
         <section class="section section-alt" id="projetos">
             <div class="container">
                 <div class="section-head reveal">
-                    <p class="kicker">Projetos</p>
-                    <h2>O que estou construindo agora.</h2>
+                    <p class="kicker" data-i18n="proj.kicker">Projetos</p>
+                    <h2 data-i18n="proj.title">O que estou construindo agora.</h2>
                 </div>
 
                 <article class="feature reveal">
@@ -231,20 +235,20 @@
                         <div class="mrf-logo">MRF<span>.services</span></div>
                     </div>
                     <div class="feature-body">
-                        <p class="feature-meta"><span class="pill">Empresa</span> Fundador</p>
+                        <p class="feature-meta" data-i18n="mrf.meta"><span class="pill">Empresa</span> Fundador</p>
                         <h3>MRF Localização e Serviços</h3>
-                        <p>
+                        <p data-i18n="mrf.desc">
                             Empresa especializada em localização de softwares, testes LQA e inteligência de mercado local
                             para Brasil e Portugal. A MRF ajuda produtos internacionais a chegarem aos dois mercados com
                             linguagem natural, culturalmente adequada e sem bugs de tradução.
                         </p>
                         <ul class="checklist">
-                            <li>Localização de software, apps e jogos (l10n e i18n)</li>
-                            <li>Testes de qualidade linguística (LQA) e funcionais</li>
-                            <li>Tradução técnica e curadoria cultural</li>
-                            <li>Inteligência de mercado: social listening, auditorias de UX e benchmarking</li>
+                            <li data-i18n="mrf.l1">Localização de software, apps e jogos (l10n e i18n)</li>
+                            <li data-i18n="mrf.l2">Testes de qualidade linguística (LQA) e funcionais</li>
+                            <li data-i18n="mrf.l3">Tradução técnica e curadoria cultural</li>
+                            <li data-i18n="mrf.l4">Inteligência de mercado: social listening, auditorias de UX e benchmarking</li>
                         </ul>
-                        <a class="btn btn-primary" href="https://mrf.services" target="_blank" rel="noopener">
+                        <a class="btn btn-primary" href="https://mrf.services" target="_blank" rel="noopener" data-i18n="mrf.cta">
                             Visitar mrf.services <svg class="ico"><use href="#i-arrow" /></svg>
                         </a>
                     </div>
@@ -257,26 +261,26 @@
                             <div class="sb-card"><span class="sb-name">Sol Ring</span><span class="sb-set">CMR</span><span class="sb-price">R$ 9,90</span></div>
                             <div class="sb-card"><span class="sb-name">Arcane Signet</span><span class="sb-set">CMM</span><span class="sb-price">R$ 4,50</span></div>
                             <div class="sb-card foil"><span class="sb-name">Command Tower</span><span class="sb-set">Foil</span><span class="sb-price">R$ 12,00</span></div>
-                            <div class="sb-total"><span>Valor do acervo</span><strong>R$ 26,40</strong></div>
+                            <div class="sb-total" data-i18n="sb.total"><span>Valor do acervo</span><strong>R$ 26,40</strong></div>
                         </div>
                     </div>
                     <div class="feature-body">
-                        <p class="feature-meta"><span class="pill pill-amber">Em beta</span> Produto · Full-stack</p>
+                        <p class="feature-meta" data-i18n="sb.meta"><span class="pill pill-amber">Em beta</span> Produto · Full-stack</p>
                         <h3>Sideboardy</h3>
-                        <p>
+                        <p data-i18n="sb.desc">
                             Seu acervo de cartas com cotações locais. Plataforma para organizar coleções, pastas de troca
                             e decks de Magic: The Gathering com preços em Reais da LigaMagic, pensada para a comunidade brasileira.
                         </p>
                         <ul class="checklist">
-                            <li>Cotações em BRL atualizadas em segundo plano, com fallback via Scryfall</li>
-                            <li>Catálogo local com mais de 450 mil cartas e busca em milissegundos</li>
-                            <li>Importação de Moxfield, Archidekt, ManaBox, Delver Lens e outros, com exportação pronta para a LigaMagic</li>
-                            <li>Decks com validação de Commander, perfis públicos, amigos, seguidores, notícias e fórum</li>
+                            <li data-i18n="sb.l1">Cotações em BRL atualizadas em segundo plano, com fallback via Scryfall</li>
+                            <li data-i18n="sb.l2">Catálogo local com mais de 450 mil cartas e busca em milissegundos</li>
+                            <li data-i18n="sb.l3">Importação de Moxfield, Archidekt, ManaBox, Delver Lens e outros, com exportação pronta para a LigaMagic</li>
+                            <li data-i18n="sb.l4">Decks com validação de Commander, perfis públicos, amigos, seguidores, notícias e fórum</li>
                         </ul>
                         <ul class="tags tags-inline">
                             <li>React 19</li><li>Tailwind CSS</li><li>Vite</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Crawlee</li>
                         </ul>
-                        <a class="btn btn-primary" href="https://sideboardy.app" target="_blank" rel="noopener">
+                        <a class="btn btn-primary" href="https://sideboardy.app" target="_blank" rel="noopener" data-i18n="sb.cta">
                             Acessar sideboardy.app <svg class="ico"><use href="#i-arrow" /></svg>
                         </a>
                     </div>
@@ -284,22 +288,22 @@
 
                 <div class="mini-grid">
                     <a class="mini reveal" href="https://github.com/matheusrayol/HyperOS-Brazilian-Portuguese" target="_blank" rel="noopener">
-                        <p class="feature-meta"><span class="pill">Comunidade</span> Localização</p>
-                        <h3>HyperOS em Português</h3>
-                        <p>Projeto de tradução do HyperOS (China e Global) para o português do Brasil, mantido pela comunidade XMBR.</p>
-                        <span class="mini-link">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                        <p class="feature-meta" data-i18n="hyper.meta"><span class="pill">Comunidade</span> Localização</p>
+                        <h3 data-i18n="hyper.title">HyperOS em Português</h3>
+                        <p data-i18n="hyper.desc">Projeto de tradução do HyperOS (China e Global) para o português do Brasil, mantido pela comunidade XMBR.</p>
+                        <span class="mini-link" data-i18n="mini.gh">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
                     </a>
                     <a class="mini reveal" href="https://github.com/matheusrayol/HOSK" target="_blank" rel="noopener">
-                        <p class="feature-meta"><span class="pill">Open source</span> Ferramenta</p>
+                        <p class="feature-meta" data-i18n="hosk.meta"><span class="pill">Open source</span> Ferramenta</p>
                         <h3>HOSK</h3>
-                        <p>HyperOS Kitchen: ferramenta para modificação de ROMs HyperOS.</p>
-                        <span class="mini-link">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
+                        <p data-i18n="hosk.desc">HyperOS Kitchen: ferramenta para modificação de ROMs HyperOS.</p>
+                        <span class="mini-link" data-i18n="mini.gh">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
                     </a>
                     <a class="mini reveal" href="https://xmbr.org" target="_blank" rel="noopener">
-                        <p class="feature-meta"><span class="pill">Comunidade</span> Conteúdo</p>
+                        <p class="feature-meta" data-i18n="xmbr.meta"><span class="pill">Comunidade</span> Conteúdo</p>
                         <h3>XMBR</h3>
-                        <p>Portal da comunidade brasileira de usuários Xiaomi, com artigos, tutoriais e traduções do sistema.</p>
-                        <span class="mini-link">Visitar xmbr.org <svg class="ico"><use href="#i-arrow" /></svg></span>
+                        <p data-i18n="xmbr.desc">Portal da comunidade brasileira de usuários Xiaomi, com artigos, tutoriais e traduções do sistema.</p>
+                        <span class="mini-link" data-i18n="mini.xmbr">Visitar xmbr.org <svg class="ico"><use href="#i-arrow" /></svg></span>
                     </a>
                 </div>
             </div>
@@ -309,67 +313,67 @@
         <section class="section" id="experiencia">
             <div class="container exp-grid">
                 <div class="section-head sticky-head reveal">
-                    <p class="kicker">Trajetória</p>
-                    <h2>Experiência profissional.</h2>
-                    <p class="muted">Uma carreira construída entre suporte, comunidade, localização e qualidade.</p>
-                    <a class="btn btn-ghost btn-small" href="matheusrayol.pdf" target="_blank" rel="noopener">
+                    <p class="kicker" data-i18n="exp.kicker">Trajetória</p>
+                    <h2 data-i18n="exp.title">Experiência profissional.</h2>
+                    <p class="muted" data-i18n="exp.sub">Uma carreira construída entre suporte, comunidade, localização e qualidade.</p>
+                    <a class="btn btn-ghost btn-small" href="matheusrayol.pdf" target="_blank" rel="noopener" data-i18n="exp.cv">
                         <svg class="ico"><use href="#i-download" /></svg> Baixar currículo
                     </a>
                 </div>
 
                 <ol class="timeline">
                     <li class="reveal">
-                        <span class="when">Atual</span>
-                        <h3>Fundador</h3>
+                        <span class="when" data-i18n="exp.now">Atual</span>
+                        <h3 data-i18n="exp.founder">Fundador</h3>
                         <p class="where">MRF Localização e Serviços</p>
                         <ul>
-                            <li>Localização de software, testes LQA e inteligência de mercado para Brasil e Portugal.</li>
-                            <li>Tradução técnica, i18n/l10n e curadoria cultural para produtos digitais.</li>
+                            <li data-i18n="exp.mrf1">Localização de software, testes LQA e inteligência de mercado para Brasil e Portugal.</li>
+                            <li data-i18n="exp.mrf2">Tradução técnica, i18n/l10n e curadoria cultural para produtos digitais.</li>
                         </ul>
                     </li>
                     <li class="reveal">
-                        <span class="when">2016 · Presente</span>
+                        <span class="when" data-i18n="exp.x1.when">2016 · Presente</span>
                         <h3>Freelance Language Localization Specialist</h3>
                         <p class="where">Beijing Xiaomi Mobile Software Co., Ltd.</p>
                         <ul>
-                            <li>Mais de 2 milhões de palavras traduzidas em 30+ projetos.</li>
-                            <li>Principal especialista de localização para português do Brasil e de Portugal.</li>
-                            <li>Testes funcionais e manuais de softwares e serviços para os dois mercados.</li>
-                            <li>Análise de qualidade, aprovação e implementação de traduções terceirizadas.</li>
-                            <li>Prêmio de Melhor Tradutor do Language Localization Center por dois anos seguidos (2021 e 2022).</li>
+                            <li data-i18n="exp.x1.1">Mais de 2 milhões de palavras traduzidas em 30+ projetos.</li>
+                            <li data-i18n="exp.x1.2">Principal especialista de localização para português do Brasil e de Portugal.</li>
+                            <li data-i18n="exp.x1.3">Testes funcionais e manuais de softwares e serviços para os dois mercados.</li>
+                            <li data-i18n="exp.x1.4">Análise de qualidade, aprovação e implementação de traduções terceirizadas.</li>
+                            <li data-i18n="exp.x1.5">Prêmio de Melhor Tradutor do Language Localization Center por dois anos seguidos (2021 e 2022).</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2020 · 2021</span>
-                        <h3>Analista de Mídias Sociais</h3>
+                        <h3 data-i18n="exp.eco.t">Analista de Mídias Sociais</h3>
                         <p class="where">Ecomud Soluções Ambientais e Pavimentação</p>
                         <ul>
-                            <li>Criação de conteúdo, implementação e manutenção do site institucional.</li>
+                            <li data-i18n="exp.eco.1">Criação de conteúdo, implementação e manutenção do site institucional.</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2020 · 2021</span>
-                        <h3>Analista de Sucesso do Cliente</h3>
+                        <h3 data-i18n="exp.knit.t">Analista de Sucesso do Cliente</h3>
                         <p class="where">KNIT Technology Corporation</p>
                         <ul>
-                            <li>Pós-venda, solução de problemas e atendimento em redes sociais.</li>
+                            <li data-i18n="exp.knit.1">Pós-venda, solução de problemas e atendimento em redes sociais.</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2021</span>
-                        <h3>Analista de Dados</h3>
+                        <h3 data-i18n="exp.tp.t">Analista de Dados</h3>
                         <p class="where">TransPerfect DataForce</p>
                         <ul>
-                            <li>Transcrição e revisão de documentos.</li>
+                            <li data-i18n="exp.tp.1">Transcrição e revisão de documentos.</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2018 · 2020</span>
-                        <h3>Consultor</h3>
+                        <h3 data-i18n="exp.abreu.t">Consultor</h3>
                         <p class="where">Comércio de Móveis Abreu</p>
                         <ul>
-                            <li>Sistema de tickets para os canais de suporte e e-commerce regional da marca.</li>
-                            <li>Redução de 70% nas falhas de hardware e software com medidas preventivas.</li>
+                            <li data-i18n="exp.abreu.1">Sistema de tickets para os canais de suporte e e-commerce regional da marca.</li>
+                            <li data-i18n="exp.abreu.2">Redução de 70% nas falhas de hardware e software com medidas preventivas.</li>
                         </ul>
                     </li>
                     <li class="reveal">
@@ -377,25 +381,25 @@
                         <h3>Community Manager</h3>
                         <p class="where">Xiaomi Technology Co., Ltd.</p>
                         <ul>
-                            <li>Interação com fãs nas redes sociais com taxa de resposta de 100%.</li>
-                            <li>Moderação dos fóruns oficiais e ponte com fã-clubes e projetos não oficiais no Brasil.</li>
+                            <li data-i18n="exp.cm.1">Interação com fãs nas redes sociais com taxa de resposta de 100%.</li>
+                            <li data-i18n="exp.cm.2">Moderação dos fóruns oficiais e ponte com fã-clubes e projetos não oficiais no Brasil.</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2015 · 2016</span>
-                        <h3>Analista de Suporte Técnico</h3>
+                        <h3 data-i18n="exp.sup.t">Analista de Suporte Técnico</h3>
                         <p class="where">Xiaomi do Brasil Tecnologia</p>
                         <ul>
-                            <li>Líder do projeto de localização para português brasileiro, com parceiros e contribuições da comunidade.</li>
-                            <li>Aumento de 20% na solução de problemas no primeiro contato.</li>
+                            <li data-i18n="exp.sup.1">Líder do projeto de localização para português brasileiro, com parceiros e contribuições da comunidade.</li>
+                            <li data-i18n="exp.sup.2">Aumento de 20% na solução de problemas no primeiro contato.</li>
                         </ul>
                     </li>
                     <li class="reveal">
                         <span class="when">2010 · 2015</span>
-                        <h3>Suporte técnico e administrativo</h3>
+                        <h3 data-i18n="exp.early.t">Suporte técnico e administrativo</h3>
                         <p class="where">Leopoldina Net Telecom · Comércio de Móveis Abreu</p>
                         <ul>
-                            <li>Manutenção de hardware, redes e sistemas de automação comercial; redução de falhas em 40%.</li>
+                            <li data-i18n="exp.early.1">Manutenção de hardware, redes e sistemas de automação comercial; redução de falhas em 40%.</li>
                         </ul>
                     </li>
                 </ol>
@@ -403,11 +407,11 @@
 
             <div class="container">
                 <div class="edu reveal">
-                    <h3>Formação</h3>
+                    <h3 data-i18n="edu.title">Formação</h3>
                     <div class="edu-grid">
-                        <div><span class="when">Desde 2022</span><strong>Análise e Desenvolvimento de Sistemas</strong><span>Universidade Estácio de Sá</span></div>
-                        <div><span class="when">Desde 2021</span><strong>Certified Tech Developer</strong><span>Digital House Brasil, com Mercado Livre e Globant</span></div>
-                        <div><span class="when">2020 · 2021</span><strong>Marketing Digital</strong><span>UNOPAR</span></div>
+                        <div><span class="when" data-i18n="edu.since22">Desde 2022</span><strong data-i18n="edu.ads">Análise e Desenvolvimento de Sistemas</strong><span>Universidade Estácio de Sá</span></div>
+                        <div><span class="when" data-i18n="edu.since21">Desde 2021</span><strong>Certified Tech Developer</strong><span data-i18n="edu.dh">Digital House Brasil, com Mercado Livre e Globant</span></div>
+                        <div><span class="when">2020 · 2021</span><strong data-i18n="edu.mkt">Marketing Digital</strong><span>UNOPAR</span></div>
                     </div>
                 </div>
             </div>
@@ -417,15 +421,15 @@
         <section class="section section-alt" id="arquivo">
             <div class="container">
                 <div class="section-head reveal">
-                    <p class="kicker">Arquivo</p>
-                    <h2>Projetos anteriores.</h2>
-                    <p class="muted">Trabalhos de cursos, bootcamps e sites institucionais. Clique para ver detalhes e capturas.</p>
+                    <p class="kicker" data-i18n="arc.kicker">Arquivo</p>
+                    <h2 data-i18n="arc.title">Projetos anteriores.</h2>
+                    <p class="muted" data-i18n="arc.sub">Trabalhos de cursos, bootcamps e sites institucionais. Clique para ver detalhes e capturas.</p>
                 </div>
-                <div class="filters" role="tablist" aria-label="Filtrar projetos">
-                    <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-                    <button class="filter" data-filter="curso" role="tab" aria-selected="false">Cursos</button>
+                <div class="filters" role="tablist" aria-label="Filtrar projetos" data-i18n-attr="filters">
+                    <button class="filter is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="f.all">Todos</button>
+                    <button class="filter" data-filter="curso" role="tab" aria-selected="false" data-i18n="f.curso">Cursos</button>
                     <button class="filter" data-filter="bootcamp" role="tab" aria-selected="false">Bootcamps</button>
-                    <button class="filter" data-filter="institucional" role="tab" aria-selected="false">Institucionais</button>
+                    <button class="filter" data-filter="institucional" role="tab" aria-selected="false" data-i18n="f.inst">Institucionais</button>
                 </div>
                 <div class="archive" id="archive"></div>
             </div>
@@ -435,9 +439,9 @@
         <section class="section" id="contato">
             <div class="container contact-grid">
                 <div class="reveal">
-                    <p class="kicker">Contato</p>
-                    <h2>Tem um projeto em mente?</h2>
-                    <p class="muted">
+                    <p class="kicker" data-i18n="c.kicker">Contato</p>
+                    <h2 data-i18n="c.title">Tem um projeto em mente?</h2>
+                    <p class="muted" data-i18n="c.sub">
                         Localização, testes ou um site novo: me conte o que você precisa e eu respondo o quanto antes.
                     </p>
                     <a class="contact-mail" href="mailto:falecom@matheusrayol.com">
@@ -452,12 +456,12 @@
                 </div>
                 <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xdobpeay" method="POST">
                     <div class="field-row">
-                        <label>Nome<input type="text" name="name" autocomplete="name" required></label>
-                        <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+                        <label data-i18n-label="c.name">Nome<input type="text" name="name" autocomplete="name" required></label>
+                        <label data-i18n-label="c.email">E-mail<input type="email" name="email" autocomplete="email" required></label>
                     </div>
-                    <label>Assunto<input type="text" name="subject" required></label>
-                    <label>Mensagem<textarea name="message" rows="5" required></textarea></label>
-                    <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+                    <label data-i18n-label="c.subject">Assunto<input type="text" name="subject" required></label>
+                    <label data-i18n-label="c.msg">Mensagem<textarea name="message" rows="5" required></textarea></label>
+                    <button class="btn btn-primary" type="submit" data-i18n="c.send">Enviar mensagem</button>
                     <p class="form-status" id="form-status" role="status"></p>
                 </form>
             </div>
@@ -466,18 +470,18 @@
 
     <footer class="site-footer">
         <div class="container footer-wrap">
-            <p>© <span id="year">2026</span> Matheus Rayol · Belo Horizonte, Brasil</p>
-            <p><a href="https://mrf.services" target="_blank" rel="noopener">mrf.services</a> · <a href="https://sideboardy.app" target="_blank" rel="noopener">sideboardy.app</a> · <a href="#inicio">Voltar ao topo</a></p>
+            <p >© <span id="year">2026</span> <span data-i18n="foot.place">Matheus Rayol · Belo Horizonte, Brasil</span></p>
+            <p><a href="https://mrf.services" target="_blank" rel="noopener">mrf.services</a> · <a href="https://sideboardy.app" target="_blank" rel="noopener">sideboardy.app</a> · <a href="#inicio" data-i18n="foot.top">Voltar ao topo</a></p>
         </div>
     </footer>
 
     <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
         <div class="modal-inner">
-            <button class="icon-btn modal-close" type="button" data-close aria-label="Fechar"><svg class="ico"><use href="#i-close" /></svg></button>
+            <button class="icon-btn modal-close" type="button" data-close aria-label="Fechar" data-i18n-attr="m.close"><svg class="ico"><use href="#i-close" /></svg></button>
             <div class="gallery">
                 <img id="modal-img" src="" alt="">
-                <button class="icon-btn gal-prev" type="button" aria-label="Imagem anterior"><svg class="ico"><use href="#i-chevron-l" /></svg></button>
-                <button class="icon-btn gal-next" type="button" aria-label="Próxima imagem"><svg class="ico"><use href="#i-chevron-r" /></svg></button>
+                <button class="icon-btn gal-prev" type="button" aria-label="Imagem anterior" data-i18n-attr="m.prev"><svg class="ico"><use href="#i-chevron-l" /></svg></button>
+                <button class="icon-btn gal-next" type="button" aria-label="Próxima imagem" data-i18n-attr="m.next"><svg class="ico"><use href="#i-chevron-r" /></svg></button>
                 <span class="gal-count" id="modal-count"></span>
             </div>
             <div class="modal-body">
@@ -489,6 +493,7 @@
         </div>
     </dialog>
 
+    <script src="assets/js/i18n-en.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </body>
 
