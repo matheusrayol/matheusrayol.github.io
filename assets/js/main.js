@@ -7,6 +7,82 @@
     var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
     var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
 
+    /* ---------- Idioma ---------- */
+    var EN = window.I18N_EN || { text: {}, attr: {}, misc: {}, projects: {} };
+    var PT = {
+        title: document.title,
+        description: $('meta[name="description"]').getAttribute('content'),
+        roles: ['Especialista em Localização', 'Analista de QA e LQA', 'Desenvolvedor Web', 'Fundador da MRF'],
+        menuOpen: 'Abrir menu', menuClose: 'Fechar menu',
+        sending: 'Enviando…', sent: 'Mensagem enviada! Retorno em breve.',
+        sendError: 'Não foi possível enviar. Tente pelo e-mail falecom@matheusrayol.com.',
+        details: 'Ver detalhes: ', openProject: 'Acessar projeto', source: 'Código-fonte', shot: ', captura ',
+        langLabel: 'View in English'
+    };
+
+    // Fusos horários do Brasil e de Portugal: indicam onde o visitante está.
+    var PT_ZONES = /^(America\/(Sao_Paulo|Araguaina|Bahia|Belem|Boa_Vista|Campo_Grande|Cuiaba|Eirunepe|Fortaleza|Maceio|Manaus|Noronha|Porto_Velho|Recife|Rio_Branco|Santarem)|Brazil\/.*|Europe\/Lisbon|Portugal|Atlantic\/(Azores|Madeira))$/;
+
+    function detectLang() {
+        var q = (location.search.match(/[?&]lang=(pt|en)\b/) || [])[1];
+        if (q) return q;
+        try {
+            var saved = localStorage.getItem('lang');
+            if (saved === 'pt' || saved === 'en') return saved;
+        } catch (e) { }
+        var tz = '';
+        try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { }
+        if (tz) return PT_ZONES.test(tz) ? 'pt' : 'en';
+        var langs = navigator.languages || [navigator.language || ''];
+        return /^pt-(br|pt)$/i.test(langs[0] || '') ? 'pt' : 'en';
+    }
+
+    var lang = 'pt';
+    var original = null;
+
+    function captureOriginal() {
+        original = { text: [], label: [], attr: [] };
+        $$('[data-i18n]').forEach(function (el) { original.text.push([el, el.innerHTML]); });
+        $$('[data-i18n-label]').forEach(function (el) { original.label.push([el, el.firstChild.nodeValue]); });
+        $$('[data-i18n-attr]').forEach(function (el) {
+            var attrs = EN.attr[el.getAttribute('data-i18n-attr')] || {};
+            var saved = {};
+            Object.keys(attrs).forEach(function (k) { saved[k] = el.getAttribute(k); });
+            original.attr.push([el, saved]);
+        });
+    }
+
+    function t(key) { return (lang === 'en' ? EN.misc : PT)[key]; }
+
+    function applyLang(next) {
+        lang = next;
+        if (!original) captureOriginal();
+        var en = lang === 'en';
+        original.text.forEach(function (o) {
+            var v = EN.text[o[0].getAttribute('data-i18n')];
+            o[0].innerHTML = en && v != null ? v : o[1];
+        });
+        original.label.forEach(function (o) {
+            var v = EN.text[o[0].getAttribute('data-i18n-label')];
+            o[0].firstChild.nodeValue = en && v != null ? v : o[1];
+        });
+        original.attr.forEach(function (o) {
+            var attrs = EN.attr[o[0].getAttribute('data-i18n-attr')] || {};
+            Object.keys(o[1]).forEach(function (k) { o[0].setAttribute(k, en ? attrs[k] : o[1][k]); });
+        });
+        doc.setAttribute('lang', en ? 'en' : 'pt-BR');
+        document.title = t('title');
+        $('meta[name="description"]').setAttribute('content', t('description'));
+        var btn = $('#lang-toggle');
+        $('span', btn).textContent = en ? 'PT' : 'EN';
+        btn.setAttribute('aria-label', t('langLabel'));
+        btn.setAttribute('title', t('langLabel'));
+        menuBtn.setAttribute('aria-label', nav.classList.contains('is-open') ? t('menuClose') : t('menuOpen'));
+        if (rotator) { roleIdx = 0; rotator.textContent = t('roles')[0]; }
+        renderArchive();
+        if (current && modal.open) fillModal();
+    }
+
     /* ---------- Tema ---------- */
     $('#theme-toggle').addEventListener('click', function () {
         var next = doc.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
@@ -28,7 +104,7 @@
         nav.classList.toggle('is-open', open);
         header.classList.toggle('menu-open', open);
         menuBtn.setAttribute('aria-expanded', String(open));
-        menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        menuBtn.setAttribute('aria-label', open ? t('menuClose') : t('menuOpen'));
         $('use', menuBtn).setAttribute('href', open ? '#i-close' : '#i-menu');
     }
     menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
@@ -49,16 +125,16 @@
     }
 
     /* ---------- Papéis rotativos ---------- */
-    var roles = ['Especialista em Localização', 'Analista de QA e LQA', 'Desenvolvedor Web', 'Fundador da MRF'];
     var rotator = $('#role-rotator');
+    var roleIdx = 0;
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (rotator && !reduced) {
-        var r = 0;
         setInterval(function () {
             rotator.classList.add('is-out');
             setTimeout(function () {
-                r = (r + 1) % roles.length;
-                rotator.textContent = roles[r];
+                var roles = t('roles');
+                roleIdx = (roleIdx + 1) % roles.length;
+                rotator.textContent = roles[roleIdx];
                 rotator.classList.remove('is-out');
             }, 300);
         }, 2800);
@@ -177,31 +253,46 @@
         }
     ];
 
+    // Textos do projeto no idioma atual (o português é a base).
+    function loc(p) {
+        var en = lang === 'en' && EN.projects[p.title];
+        if (!en) return p;
+        return { title: en.title || p.title, sub: en.sub || p.sub, desc: en.desc || p.desc, meta: en.meta || p.meta };
+    }
+
     var archive = $('#archive');
-    projects.forEach(function (p, i) {
-        var btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'tile';
-        btn.dataset.cat = p.cat;
-        btn.dataset.index = i;
-        btn.innerHTML =
-            '<div class="tile-img"><img loading="lazy" alt="" src="' + p.imgs[0] + '"></div>' +
-            '<div class="tile-body"><h3></h3><p></p></div>';
-        $('h3', btn).textContent = p.title;
-        $('p', btn).textContent = p.sub;
-        btn.setAttribute('aria-label', 'Ver detalhes: ' + p.title);
-        btn.addEventListener('click', function () { openModal(i); });
-        archive.appendChild(btn);
-    });
+    var activeFilter = 'all';
+
+    function renderArchive() {
+        archive.innerHTML = '';
+        projects.forEach(function (p, i) {
+            var l = loc(p);
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'tile';
+            btn.dataset.cat = p.cat;
+            btn.hidden = activeFilter !== 'all' && p.cat !== activeFilter;
+            btn.innerHTML =
+                '<div class="tile-img"><img loading="lazy" alt="" src="' + p.imgs[0] + '"></div>' +
+                '<div class="tile-body"><h3></h3><p></p></div>';
+            $('h3', btn).textContent = l.title;
+            $('p', btn).textContent = l.sub;
+            btn.setAttribute('aria-label', t('details') + l.title);
+            btn.addEventListener('click', function () { openModal(i); });
+            archive.appendChild(btn);
+        });
+    }
 
     $$('.filter').forEach(function (f) {
         f.addEventListener('click', function () {
-            var cat = f.dataset.filter;
+            activeFilter = f.dataset.filter;
             $$('.filter').forEach(function (o) {
                 o.classList.toggle('is-active', o === f);
                 o.setAttribute('aria-selected', String(o === f));
             });
-            $$('.tile', archive).forEach(function (t) { t.hidden = cat !== 'all' && t.dataset.cat !== cat; });
+            $$('.tile', archive).forEach(function (tile) {
+                tile.hidden = activeFilter !== 'all' && tile.dataset.cat !== activeFilter;
+            });
         });
     });
 
@@ -212,7 +303,7 @@
     function showImg() {
         var imgs = current.imgs;
         $('#modal-img').src = imgs[imgIdx];
-        $('#modal-img').alt = current.title + ', captura ' + (imgIdx + 1);
+        $('#modal-img').alt = loc(current).title + t('shot') + (imgIdx + 1);
         $('#modal-count').textContent = (imgIdx + 1) + ' / ' + imgs.length;
         var multi = imgs.length > 1;
         $('.gal-prev', modal).hidden = !multi;
@@ -228,20 +319,25 @@
         return a;
     }
 
-    function openModal(i) {
-        current = projects[i]; imgIdx = 0;
-        $('#modal-title').textContent = current.title;
-        $('#modal-desc').textContent = current.desc;
+    function fillModal() {
+        var l = loc(current);
+        $('#modal-title').textContent = l.title;
+        $('#modal-desc').textContent = l.desc;
         var dl = $('#modal-meta'); dl.innerHTML = '';
-        Object.keys(current.meta).forEach(function (k) {
+        Object.keys(l.meta).forEach(function (k) {
             var dt = document.createElement('dt'); dt.textContent = k;
-            var dd = document.createElement('dd'); dd.textContent = current.meta[k];
+            var dd = document.createElement('dd'); dd.textContent = l.meta[k];
             dl.appendChild(dt); dl.appendChild(dd);
         });
         var links = $('#modal-links'); links.innerHTML = '';
-        if (current.url) links.appendChild(linkBtn(current.url, 'Acessar projeto', true));
-        if (current.code) links.appendChild(linkBtn(current.code, 'Código-fonte', false));
+        if (current.url) links.appendChild(linkBtn(current.url, t('openProject'), true));
+        if (current.code) links.appendChild(linkBtn(current.code, t('source'), false));
         showImg();
+    }
+
+    function openModal(i) {
+        current = projects[i]; imgIdx = 0;
+        fillModal();
         if (typeof modal.showModal === 'function') modal.showModal();
         else modal.setAttribute('open', '');
     }
@@ -270,20 +366,27 @@
         var btn = $('button[type="submit"]', form);
         btn.disabled = true;
         status.className = 'form-status';
-        status.textContent = 'Enviando…';
+        status.textContent = t('sending');
         fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
             .then(function (res) {
                 if (!res.ok) throw new Error();
                 form.reset();
                 status.className = 'form-status ok';
-                status.textContent = 'Mensagem enviada! Retorno em breve.';
+                status.textContent = t('sent');
             })
             .catch(function () {
                 status.className = 'form-status err';
-                status.textContent = 'Não foi possível enviar. Tente pelo e-mail falecom@matheusrayol.com.';
+                status.textContent = t('sendError');
             })
             .then(function () { btn.disabled = false; });
     });
 
     $('#year').textContent = new Date().getFullYear();
+
+    $('#lang-toggle').addEventListener('click', function () {
+        var next = lang === 'en' ? 'pt' : 'en';
+        try { localStorage.setItem('lang', next); } catch (e) { }
+        applyLang(next);
+    });
+    applyLang(detectLang());
 })();
