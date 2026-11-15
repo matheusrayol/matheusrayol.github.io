@@ -140,6 +140,8 @@ button { font: inherit; color: inherit; }
     display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px;
     background: var(--grad); color: #0b0d12; font-size: 0.85rem; letter-spacing: 0;
 }
+/* Tema claro: fundo sólido com texto branco para AA (>= 4,5:1); o gradiente claro não garante contraste nas bordas */
+[data-theme="light"] .brand-mark { background: var(--accent); color: var(--accent-ink); }
 .nav { display: flex; gap: 4px; margin-left: auto; }
 .nav a {
     text-decoration: none; color: var(--muted); font-size: 0.93rem; font-weight: 500;
@@ -273,6 +275,8 @@ button { font: inherit; color: inherit; }
     color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent);
 }
 .pill-amber { color: var(--accent-2); background: color-mix(in srgb, var(--accent-2) 16%, transparent); }
+/* Tema claro: âmbar escuro garante AA (>= 4,5:1) na pílula translúcida */
+[data-theme="light"] .pill-amber { color: #8a4f08; background: color-mix(in srgb, #8a4f08 16%, transparent); }
 .checklist { list-style: none; display: grid; gap: 10px; margin: 20px 0 24px; }
 .checklist li { position: relative; padding-left: 28px; font-size: 0.95rem; }
 .checklist li::before {

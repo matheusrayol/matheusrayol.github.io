@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'">
     <title>Matheus Rayol · Localização, QA e Desenvolvimento</title>
     <meta name="description" content="Matheus Rayol: especialista em localização de software e QA para Brasil e Portugal, fundador da MRF Localização e Serviços e criador do Sideboardy.">
     <meta name="theme-color" content="#0b0d12">
@@ -19,6 +20,9 @@
     <meta property="og:description" content="Especialista em localização de software e QA, fundador da MRF Localização e Serviços e criador do Sideboardy.">
     <meta property="og:image" content="https://matheusrayol.com/assets/img/matheus.jpg">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Matheus Rayol · Localização, QA e Desenvolvimento">
+    <meta name="twitter:description" content="Especialista em localização de software e QA, fundador da MRF Localização e Serviços e criador do Sideboardy.">
+    <meta name="twitter:image" content="https://matheusrayol.com/assets/img/matheus.jpg">
     <meta name="facebook-domain-verification" content="gzxtdl73rl126pv0uuynq66aog4gp7" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <script>
-        (function () {
-            try {
-                var t = localStorage.getItem('theme');
-                if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', t);
-            } catch (e) { }
-        })();
-    </script>
+    <script src="assets/js/theme-init.js"></script>
 
     <script type="application/ld+json">
     {
@@ -265,7 +261,7 @@
                         </div>
                     </div>
                     <div class="feature-body">
-                        <p class="feature-meta" data-i18n="sb.meta"><span class="pill pill-amber">Em beta</span> Produto · Full-stack</p>
+                        <p class="feature-meta" data-i18n="sb.meta"><span class="pill pill-amber">1.0 estável</span> Produto · Full-stack</p>
                         <h3>Sideboardy</h3>
                         <p data-i18n="sb.desc">
                             Seu acervo de cartas com cotações locais. Plataforma para organizar coleções, pastas de troca
@@ -273,7 +269,7 @@
                         </p>
                         <ul class="checklist">
                             <li data-i18n="sb.l1">Cotações em BRL atualizadas em segundo plano, com fallback via Scryfall</li>
-                            <li data-i18n="sb.l2">Catálogo local com mais de 450 mil cartas e busca em milissegundos</li>
+                            <li data-i18n="sb.l2">Catálogo local com mais de 100 mil impressões pesquisáveis e busca em milissegundos</li>
                             <li data-i18n="sb.l3">Importação de Moxfield, Archidekt, ManaBox, Delver Lens e outros, com exportação pronta para a LigaMagic</li>
                             <li data-i18n="sb.l4">Decks com validação de Commander, perfis públicos, amigos, seguidores, notícias e fórum</li>
                         </ul>
@@ -299,11 +295,11 @@
                         <p data-i18n="hosk.desc">HyperOS Kitchen: ferramenta para modificação de ROMs HyperOS.</p>
                         <span class="mini-link" data-i18n="mini.gh">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
                     </a>
-                    <a class="mini reveal" href="https://xmbr.org" target="_blank" rel="noopener">
+                    <a class="mini reveal" href="https://github.com/matheusrayol/HyperOS-Brazilian-Portuguese" target="_blank" rel="noopener">
                         <p class="feature-meta" data-i18n="xmbr.meta"><span class="pill">Comunidade</span> Conteúdo</p>
                         <h3>XMBR</h3>
                         <p data-i18n="xmbr.desc">Portal da comunidade brasileira de usuários Xiaomi, com artigos, tutoriais e traduções do sistema.</p>
-                        <span class="mini-link" data-i18n="mini.xmbr">Visitar xmbr.org <svg class="ico"><use href="#i-arrow" /></svg></span>
+                        <span class="mini-link" data-i18n="mini.gh">Ver no GitHub <svg class="ico"><use href="#i-arrow" /></svg></span>
                     </a>
                 </div>
             </div>
@@ -426,12 +422,12 @@
                     <p class="muted" data-i18n="arc.sub">Trabalhos de cursos, bootcamps e sites institucionais. Clique para ver detalhes e capturas.</p>
                 </div>
                 <div class="filters" role="tablist" aria-label="Filtrar projetos" data-i18n-attr="filters">
-                    <button class="filter is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="f.all">Todos</button>
-                    <button class="filter" data-filter="curso" role="tab" aria-selected="false" data-i18n="f.curso">Cursos</button>
-                    <button class="filter" data-filter="bootcamp" role="tab" aria-selected="false">Bootcamps</button>
-                    <button class="filter" data-filter="institucional" role="tab" aria-selected="false" data-i18n="f.inst">Institucionais</button>
+                    <button class="filter is-active" id="filter-all" data-filter="all" role="tab" aria-selected="true" aria-controls="archive" data-i18n="f.all">Todos</button>
+                    <button class="filter" id="filter-curso" data-filter="curso" role="tab" aria-selected="false" aria-controls="archive" tabindex="-1" data-i18n="f.curso">Cursos</button>
+                    <button class="filter" id="filter-bootcamp" data-filter="bootcamp" role="tab" aria-selected="false" aria-controls="archive" tabindex="-1">Bootcamps</button>
+                    <button class="filter" id="filter-institucional" data-filter="institucional" role="tab" aria-selected="false" aria-controls="archive" tabindex="-1" data-i18n="f.inst">Institucionais</button>
                 </div>
-                <div class="archive" id="archive"></div>
+                <div class="archive" id="archive" role="tabpanel" tabindex="0" aria-labelledby="filter-all"></div>
             </div>
         </section>
 
