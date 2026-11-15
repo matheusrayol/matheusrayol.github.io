@@ -35,7 +35,12 @@ check('JS: setas, Home/End, tabIndex e aria-labelledby',
 // 3) Resíduos de issues antigas
 for (const bad of ['450 mil cartas', 'Em beta', 'In beta', 'xmbr.org', 'ecomud.com.br'])
   check('sem resíduo "' + bad + '"', !html.includes(bad));
-check('nenhum href para mrf.services (não responde externamente)', !/href="https:\/\/mrf\.services/.test(html) && !en.includes('href=\\"https://mrf.services'));
+// mrf.services volta a ser link vivo (apex responde 200; medida externa)
+const mrfHrefs = (html.match(/href="https:\/\/mrf\.services"/g) || []).length;
+check('3 hrefs do mrf.services no index.html (hero, CTA, rodapé)', mrfHrefs === 3, mrfHrefs + ' hrefs');
+check('worksFor.url no JSON-LD aponta para mrf.services', /"worksFor":\s*\{[^}]*"url":\s*"https:\/\/mrf\.services"/.test(html));
+check('chaves EN do mrf restauradas (hero.lead com href e mrf.cta)',
+  /href=\\"https:\/\/mrf\.services/.test(en) && en.includes('"mrf.cta"'));
 
 // 4) SEO
 check('title', /<title>/.test(html));

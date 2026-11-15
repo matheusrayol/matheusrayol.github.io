@@ -229,6 +229,7 @@
             title: 'Ecomud', cat: 'institucional', sub: 'WordPress + Avada',
             desc: 'Site institucional da Ecomud, empresa que reaproveita rejeitos de minério para pavimentação sustentável de estradas.',
             meta: { Tipo: 'Site institucional', Tecnologias: 'WordPress + Avada', Entrega: 'Outubro/2021' },
+            url: 'https://ecomud.com.br',
             imgs: [IMG + 'ecomud/ecomud.png'].concat(range('ecomud', 'ecomud_', 1, 8))
         },
         {
