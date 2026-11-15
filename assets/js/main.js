@@ -283,16 +283,38 @@
         });
     }
 
-    $$('.filter').forEach(function (f) {
-        f.addEventListener('click', function () {
-            activeFilter = f.dataset.filter;
-            $$('.filter').forEach(function (o) {
-                o.classList.toggle('is-active', o === f);
-                o.setAttribute('aria-selected', String(o === f));
-            });
-            $$('.tile', archive).forEach(function (tile) {
-                tile.hidden = activeFilter !== 'all' && tile.dataset.cat !== activeFilter;
-            });
+    /* Filtros no padrao de tabs da WAI-ARIA APG: setas <-/-> e Home/End movem
+       foco e ativam a tab (selecao automatica), com roving tabindex. */
+    var filterTabs = $$('.filter');
+
+    function selectTab(tab) {
+        activeFilter = tab.dataset.filter;
+        filterTabs.forEach(function (o) {
+            var on = o === tab;
+            o.classList.toggle('is-active', on);
+            o.setAttribute('aria-selected', String(on));
+            o.tabIndex = on ? 0 : -1;
+        });
+        archive.setAttribute('aria-labelledby', tab.id);
+        $$('.tile', archive).forEach(function (tile) {
+            tile.hidden = activeFilter !== 'all' && tile.dataset.cat !== activeFilter;
+        });
+    }
+
+    filterTabs.forEach(function (tab, idx) {
+        tab.tabIndex = tab.classList.contains('is-active') ? 0 : -1;
+        tab.addEventListener('click', function () { selectTab(tab); });
+        tab.addEventListener('keydown', function (e) {
+            var next = null;
+            if (e.key === 'ArrowRight') next = filterTabs[(idx + 1) % filterTabs.length];
+            else if (e.key === 'ArrowLeft') next = filterTabs[(idx - 1 + filterTabs.length) % filterTabs.length];
+            else if (e.key === 'Home') next = filterTabs[0];
+            else if (e.key === 'End') next = filterTabs[filterTabs.length - 1];
+            if (next) {
+                e.preventDefault();
+                selectTab(next);
+                next.focus();
+            }
         });
     });
 
