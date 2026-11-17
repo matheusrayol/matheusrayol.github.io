@@ -1,0 +1,32 @@
+name: Abre as PRs prontas
+on:
+  push:
+    branches:
+      - agentes/rayol/pr-bot
+    paths:
+      - '.github/workflows/abrir-prs.yml'
+      - '.github/pr-bodies/**'
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  abrir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Abre as PRs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          AUTH="basic $(printf 'x-access-token:%s' "$GITHUB_TOKEN" | base64 -w0)"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: $AUTH" \
+              clone --depth 1 --branch agentes/rayol/pr-bot "https://github.com/$GH_REPO.git" repo
+          cd repo
+          python3 .github/pr-bodies/abrir-prs.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pr-result.md
+          git commit -q -m "chore: resultado da abertura das PRs" || true
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: $AUTH" \
+              push origin HEAD:agentes/rayol/pr-bot
