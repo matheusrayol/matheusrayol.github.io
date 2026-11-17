@@ -162,8 +162,6 @@
         for (var i = from; i <= to; i++) out.push(IMG + dir + '/' + prefix + i + (ext || '.png'));
         return out;
     };
-    var DIO = 'https://github.com/matheusrayol/dio-orbi-games-developer/tree/main/';
-    var DIO_URL = 'https://matheusrayol.com/dio-orbi-games-developer/';
     var DIO_COURSE = 'DIO Órbi Web Games Developer';
 
     var projects = [
@@ -171,70 +169,60 @@
             title: 'App To-Do', cat: 'curso', sub: 'Front-End II · Certified Tech Developer',
             desc: 'Aplicação web para gerenciamento de tarefas consumindo a API da instituição de ensino, com Bootstrap 5 e customizações próprias em CSS e JavaScript.',
             meta: { Curso: 'Certified Tech Developer', Disciplina: 'Front-End II', Entrega: 'Abril/2022' },
-            url: 'https://matheusrayol.com/FEII-CheckpointII', code: 'https://github.com/matheusrayol/FEII-CheckpointII',
             imgs: [IMG + 'todoapp/todoapp.png'].concat(range('todoapp', 'todo_', 1, 11))
         },
         {
             title: 'Game Geek', cat: 'curso', sub: 'Front-End II · Certified Tech Developer',
             desc: 'Biblioteca online para cadastro de jogos, com manipulação do DOM e estilos customizados sobre o Bootstrap 5.',
             meta: { Curso: 'Certified Tech Developer', Disciplina: 'Front-End II', Entrega: 'Março/2022' },
-            url: 'https://matheusrayol.com/FEII-CheckpointI', code: 'https://github.com/matheusrayol/FEII-CheckpointI',
             imgs: [IMG + 'gamegeek/gamegeek.jpg'].concat(range('gamegeek', 'gamegeek_', 2, 5))
         },
         {
             title: 'Streamy', cat: 'curso', sub: 'Front-End I · Certified Tech Developer',
             desc: 'Protótipo de um serviço de streaming, com página individual para os itens do catálogo.',
             meta: { Curso: 'Certified Tech Developer', Disciplina: 'Front-End I', Entrega: 'Dezembro/2021' },
-            url: 'https://matheusrayol.com/FEI-CheckpointIII', code: 'https://github.com/matheusrayol/FEI-CheckpointIII',
             imgs: [IMG + 'streamy/streamy.jpg'].concat(range('streamy', 'streamy_', 2, 5))
         },
         {
             title: 'Minha Cidade v2', cat: 'curso', sub: 'Front-End I · Certified Tech Developer',
             desc: 'Curiosidades e pontos turísticos da cidade, reconstruído com os conhecimentos adquiridos após a primeira versão.',
             meta: { Curso: 'Certified Tech Developer', Disciplina: 'Front-End I', Entrega: 'Novembro/2021' },
-            url: 'https://matheusrayol.com/FEI-CheckpointII', code: 'https://github.com/matheusrayol/FEI-CheckpointII',
             imgs: [IMG + 'minhacidadev2/minhacidadev2.png'].concat(range('minhacidadev2', 'minhacidadev2_', 2, 4))
         },
         {
             title: 'Minha Cidade', cat: 'curso', sub: 'Front-End I · Certified Tech Developer',
             desc: 'Página com curiosidades e pontos turísticos da cidade em que residimos.',
             meta: { Curso: 'Certified Tech Developer', Disciplina: 'Front-End I', Entrega: 'Novembro/2021' },
-            url: 'https://matheusrayol.com/FEI-CheckpointI', code: 'https://github.com/matheusrayol/FEI-CheckpointI',
             imgs: [IMG + 'minhacidade/minhacidade.png', IMG + 'minhacidade/minhacidade_2.png']
         },
         {
             title: 'Jogo Dino', cat: 'bootcamp', sub: 'Bootcamp Órbi Web Games Developer',
             desc: 'Recriação do jogo do dinossauro presente no Chrome, feita com HTML e JavaScript.',
             meta: { Curso: DIO_COURSE, Tecnologias: 'HTML + JavaScript', Entrega: 'Abril/2022' },
-            url: DIO_URL + '05-Chrome_Dino_Game', code: DIO + '05-Chrome_Dino_Game',
             imgs: [IMG + 'dio/dino.png']
         },
         {
             title: 'Space Shooter', cat: 'bootcamp', sub: 'Bootcamp Órbi Web Games Developer',
             desc: 'Recriação de um jogo de nave no estilo Space Shooter, feita com HTML e JavaScript.',
             meta: { Curso: DIO_COURSE, Tecnologias: 'HTML + JavaScript', Entrega: 'Abril/2022' },
-            url: DIO_URL + '04-Jogo_Space_Shooter', code: DIO + '04-Jogo_Space_Shooter',
             imgs: [IMG + 'dio/spaceshooter.png']
         },
         {
             title: 'Jogo Genius', cat: 'bootcamp', sub: 'Bootcamp Órbi Web Games Developer',
             desc: 'Recriação do clássico jogo de memória Genius, feita com HTML e JavaScript.',
             meta: { Curso: DIO_COURSE, Tecnologias: 'HTML + JavaScript', Entrega: 'Abril/2022' },
-            url: DIO_URL + '03-Jogo_Genesis', code: DIO + '03-Jogo_Genesis',
             imgs: [IMG + 'dio/genius.png']
         },
         {
             title: 'Jogo Resgate', cat: 'bootcamp', sub: 'Bootcamp Órbi Web Games Developer',
             desc: 'Recriação do jogo Resgate, feita com HTML e JavaScript.',
             meta: { Curso: DIO_COURSE, Tecnologias: 'HTML + JavaScript', Entrega: 'Abril/2022' },
-            url: DIO_URL + '02-Jogo_de_naves', code: DIO + '02-Jogo_de_naves',
             imgs: [IMG + 'dio/resgate.png', IMG + 'dio/dio-resgate_1.png']
         },
         {
             title: 'Jogo da Velha', cat: 'bootcamp', sub: 'Bootcamp Órbi Web Games Developer',
             desc: 'Jogo da velha para dois jogadores, feito com HTML e JavaScript.',
             meta: { Curso: DIO_COURSE, Tecnologias: 'HTML + JavaScript', Entrega: 'Abril/2022' },
-            url: DIO_URL + '01-Jogo_da_velha', code: DIO + '01-Jogo_da_velha',
             imgs: [IMG + 'dio/jogodavelha.png', IMG + 'dio/dio-velha_1.png', IMG + 'dio/dio-velha_2.png']
         },
         {
@@ -248,7 +236,7 @@
             title: 'XMBR', cat: 'institucional', sub: 'WordPress + Newspaper',
             desc: 'Portal da comunidade brasileira de usuários Xiaomi, com notícias, tutoriais e traduções.',
             meta: { Tipo: 'Portal de comunidade', Tecnologias: 'WordPress + Newspaper' },
-            url: 'https://xmbr.org',
+            url: 'https://github.com/matheusrayol/HyperOS-Brazilian-Portuguese',
             imgs: [IMG + 'xmbr/xmbr.png']
         }
     ];
@@ -273,7 +261,7 @@
             btn.dataset.cat = p.cat;
             btn.hidden = activeFilter !== 'all' && p.cat !== activeFilter;
             btn.innerHTML =
-                '<div class="tile-img"><img loading="lazy" alt="" src="' + p.imgs[0] + '"></div>' +
+                '<div class="tile-img"><img loading="lazy" alt="" width="640" height="400" src="' + p.imgs[0] + '"></div>' +
                 '<div class="tile-body"><h3></h3><p></p></div>';
             $('h3', btn).textContent = l.title;
             $('p', btn).textContent = l.sub;
@@ -283,18 +271,44 @@
         });
     }
 
-    $$('.filter').forEach(function (f) {
-        f.addEventListener('click', function () {
-            activeFilter = f.dataset.filter;
-            $$('.filter').forEach(function (o) {
-                o.classList.toggle('is-active', o === f);
-                o.setAttribute('aria-selected', String(o === f));
-            });
-            $$('.tile', archive).forEach(function (tile) {
-                tile.hidden = activeFilter !== 'all' && tile.dataset.cat !== activeFilter;
-            });
+    var filterBtns = Array.prototype.slice.call($$('.filter'));
+
+    function activateFilter(f) {
+        activeFilter = f.dataset.filter;
+        filterBtns.forEach(function (o) {
+            var on = o === f;
+            o.classList.toggle('is-active', on);
+            o.setAttribute('aria-selected', String(on));
+            o.tabIndex = on ? 0 : -1;
         });
+        if (f.id) archive.setAttribute('aria-labelledby', f.id);
+        $$('.tile', archive).forEach(function (tile) {
+            tile.hidden = activeFilter !== 'all' && tile.dataset.cat !== activeFilter;
+        });
+    }
+
+    filterBtns.forEach(function (f) {
+        f.tabIndex = f.classList.contains('is-active') ? 0 : -1;
+        f.addEventListener('click', function () { activateFilter(f); });
     });
+
+    /* Tabs do filtro: navegação por teclado (roving tabindex) */
+    var filtersBar = $('.filters');
+    if (filtersBar) {
+        filtersBar.addEventListener('keydown', function (e) {
+            var idx = filterBtns.indexOf(document.activeElement);
+            if (idx === -1) return;
+            var next = null;
+            if (e.key === 'ArrowRight') next = (idx + 1) % filterBtns.length;
+            else if (e.key === 'ArrowLeft') next = (idx - 1 + filterBtns.length) % filterBtns.length;
+            else if (e.key === 'Home') next = 0;
+            else if (e.key === 'End') next = filterBtns.length - 1;
+            if (next === null) return;
+            e.preventDefault();
+            filterBtns[next].focus();
+            activateFilter(filterBtns[next]);
+        });
+    }
 
     /* ---------- Modal ---------- */
     var modal = $('#project-modal');
